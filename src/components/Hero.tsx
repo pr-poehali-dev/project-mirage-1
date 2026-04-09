@@ -13,34 +13,38 @@ export function Hero() {
       <Header />
 
       <div className="pb-16 mt-auto text-center relative">
-        <Pill className="mb-6">ПСИХОЛОГ · ОНЛАЙН-КОНСУЛЬТАЦИИ</Pill>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-sentient">
-          Пространство для <br />
-          <i className="font-light">вашего</i> исцеления
+        <Pill className="mb-6">ПСИХОЛОГ · СОЦИАЛЬНАЯ ПСИХОЛОГИЯ · ВЛАДИВОСТОК И ОНЛАЙН</Pill>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-sentient max-w-[700px] mx-auto">
+          Вы справляетесь. Но внутри —{" "}
+          <i className="font-light">давно не спокойно.</i>
         </h1>
-        <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[440px] mx-auto">
-          Индивидуальные консультации в безопасной атмосфере — шаг к себе настоящему
+        <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[460px] mx-auto">
+          Усталость без причины. Тревога. Ощущение, что живёте «не своей жизнью».
         </p>
 
-        <a className="contents max-sm:hidden" href="#contact">
-          <Button
-            className="mt-14"
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => setHovering(false)}
-          >
-            [Записаться на консультацию]
-          </Button>
-        </a>
-        <a className="contents sm:hidden" href="#contact">
-          <Button
-            size="sm"
-            className="mt-14"
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => setHovering(false)}
-          >
-            [Записаться]
-          </Button>
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+          <a href="#contact">
+            <Button
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
+            >
+              [Записаться бесплатно →]
+            </Button>
+          </a>
+          <a href="#about">
+            <Button
+              variant="ghost"
+              className="font-mono text-foreground/60 hover:text-foreground uppercase text-sm"
+              onMouseEnter={() => setHovering(false)}
+            >
+              Узнать обо мне
+            </Button>
+          </a>
+        </div>
+
+        <p className="font-mono text-xs text-foreground/40 mt-6">
+          100+ клиентов уже прошли путь к себе
+        </p>
       </div>
     </div>
   );

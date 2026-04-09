@@ -10,15 +10,26 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
       <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="1.5" />
       <circle cx="20" cy="20" r="8" fill="white" opacity="0.15" />
       <circle cx="20" cy="20" r="3" fill="white" />
-      {/* ПСИХОЛОГ text */}
       <text
         x="46"
-        y="25"
+        y="19"
         fill="white"
         fontFamily="monospace"
-        fontSize="14"
+        fontSize="13"
+        letterSpacing="2"
+        fontWeight="400"
+      >
+        ОЛЬГА
+      </text>
+      <text
+        x="46"
+        y="33"
+        fill="white"
+        fontFamily="monospace"
+        fontSize="9"
         letterSpacing="3"
         fontWeight="400"
+        opacity="0.5"
       >
         ПСИХОЛОГ
       </text>
