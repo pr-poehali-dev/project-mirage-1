@@ -37,7 +37,7 @@ export function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="relative z-10 py-24 md:py-32" style={{ background: "rgba(10,21,32,0.92)" }}>
+    <section className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.95)" }}>
       <div className="container">
         <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-4">
           Отзывы
@@ -47,7 +47,7 @@ export function Testimonials() {
         </h2>
 
         <div className="max-w-2xl mx-auto">
-          <div className="border border-foreground/10 rounded-2xl p-8 md:p-10 flex flex-col gap-6" style={{ background: "rgba(14,28,42,0.8)" }}>
+          <div className="border border-foreground/10 rounded-2xl p-8 md:p-10 flex flex-col gap-6" style={{ background: "rgba(0,38,46,0.8)" }}>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#4a7c6f]/30 border border-[#4a7c6f]/40 flex items-center justify-center font-sentient text-lg text-[#4a7c6f]">
                 {t.name[0]}

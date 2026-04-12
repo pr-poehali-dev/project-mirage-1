@@ -28,7 +28,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(14,28,42,0.95)'}}>
+    <section id="contact" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.97)'}}>
       <div className="container">
       <div className="max-w-xl mx-auto">
         <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-4">

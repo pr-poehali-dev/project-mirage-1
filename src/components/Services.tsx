@@ -41,7 +41,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(10,21,32,0.92)'}}>
+    <section id="services" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,48,57,0.95)'}}>
       <div className="container">
       <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-4">
         Услуги
