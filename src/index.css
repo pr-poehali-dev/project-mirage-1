@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Шрифт Sentient заменен на PT Serif с поддержкой кириллицы */
 
 @layer base {
