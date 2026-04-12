@@ -58,7 +58,7 @@ html {
 
   body {
     @apply text-foreground;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
     background: transparent;
   }
 
@@ -86,7 +86,7 @@ html {
   }
 
   .font-sentient {
-    font-family: "PT Serif", serif;
+    font-family: "Cormorant Garamond", serif;
   }
 
   .shadow-glow {
