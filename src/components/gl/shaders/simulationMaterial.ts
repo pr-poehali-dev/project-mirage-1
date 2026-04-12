@@ -40,29 +40,29 @@ export class SimulationMaterial extends THREE.ShaderMaterial {
       uniform float uNoiseIntensity;
       uniform float uTimeScale;
       uniform float uLoopPeriod;
+      uniform vec3 uMouse;
+      uniform float uMouseStrength;
       varying vec2 vUv;
 
       ${periodicNoiseGLSL}
 
       void main() {
-        // Get the original particle position
         vec3 originalPos = texture2D(positions, vUv).rgb;
-
-        // Use continuous time that naturally loops through sine/cosine periodicity
         float continuousTime = uTime * uTimeScale * (6.28318530718 / uLoopPeriod);
-        // float continuousTime = 0.0;
-
-        // Scale position for noise input
         vec3 noiseInput = originalPos * uNoiseScale;
 
-        // Generate periodic displacement for each axis using different phase offsets
         float displacementX = periodicNoise(noiseInput + vec3(0.0, 0.0, 0.0), continuousTime);
-        float displacementY = periodicNoise(noiseInput + vec3(50.0, 0.0, 0.0), continuousTime + 2.094); // +120°
-        float displacementZ = periodicNoise(noiseInput + vec3(0.0, 50.0, 0.0), continuousTime + 4.188); // +240°
+        float displacementY = periodicNoise(noiseInput + vec3(50.0, 0.0, 0.0), continuousTime + 2.094);
+        float displacementZ = periodicNoise(noiseInput + vec3(0.0, 50.0, 0.0), continuousTime + 4.188);
 
-        // Apply distortion to original position
         vec3 distortion = vec3(displacementX, displacementY, displacementZ) * uNoiseIntensity;
         vec3 finalPos = originalPos + distortion;
+
+        // Притяжение к курсору
+        vec3 toMouse = uMouse - finalPos;
+        float dist = length(toMouse);
+        float influence = smoothstep(3.0, 0.0, dist);
+        finalPos += toMouse * influence * uMouseStrength;
 
         gl_FragColor = vec4(finalPos, 1.0);
       }`,
@@ -72,7 +72,9 @@ export class SimulationMaterial extends THREE.ShaderMaterial {
         uNoiseScale: { value: 1.0 },
         uNoiseIntensity: { value: 0.5 },
         uTimeScale: { value: 1 },
-        uLoopPeriod: { value: 24.0 }
+        uLoopPeriod: { value: 24.0 },
+        uMouse: { value: new THREE.Vector3(0, 0, 0) },
+        uMouseStrength: { value: 0.18 }
       }
     })
   }

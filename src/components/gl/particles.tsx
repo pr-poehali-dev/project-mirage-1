@@ -164,6 +164,15 @@ export function Particles({
     simulationMaterial.uniforms.uNoiseIntensity.value = noiseIntensity;
     simulationMaterial.uniforms.uTimeScale.value = timeScale * speed;
 
+    // Передаём позицию мыши в мировых координатах
+    const mouse = state.pointer;
+    const vec = new THREE.Vector3(mouse.x, mouse.y, 0.5);
+    vec.unproject(state.camera);
+    const dir = vec.sub(state.camera.position).normalize();
+    const dist = -state.camera.position.y / dir.y;
+    const mouseWorld = state.camera.position.clone().add(dir.multiplyScalar(dist));
+    simulationMaterial.uniforms.uMouse.value.lerp(mouseWorld, 0.08);
+
     dofPointsMaterial.uniforms.uPointSize.value = pointSize;
     dofPointsMaterial.uniforms.uOpacity.value = opacity;
     dofPointsMaterial.uniforms.uRevealFactor.value = revealFactor;

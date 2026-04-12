@@ -1,11 +1,52 @@
 import { GL } from "./gl";
 import { Pill } from "./Pill";
 import { Button } from "./ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "./Header";
+import { useMagnetic } from "@/hooks/useMagnetic";
+
+const TYPED_PHRASES = [
+  "давно не спокойно.",
+  "накопилась усталость.",
+  "что-то важное потеряно.",
+  "нет сил быть собой.",
+];
+
+function TypedText() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const phrase = TYPED_PHRASES[phraseIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!deleting && displayed.length < phrase.length) {
+      timeout = setTimeout(() => setDisplayed(phrase.slice(0, displayed.length + 1)), 55);
+    } else if (!deleting && displayed.length === phrase.length) {
+      timeout = setTimeout(() => setDeleting(true), 2200);
+    } else if (deleting && displayed.length > 0) {
+      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 30);
+    } else if (deleting && displayed.length === 0) {
+      setDeleting(false);
+      setPhraseIndex((i) => (i + 1) % TYPED_PHRASES.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, deleting, phraseIndex]);
+
+  return (
+    <i className="font-light">
+      {displayed}
+      <span className="animate-pulse text-[#c9a84c]/60">|</span>
+    </i>
+  );
+}
 
 export function Hero() {
   const [hovering, setHovering] = useState(false);
+  const magBtn1 = useMagnetic(0.3);
+  const magBtn2 = useMagnetic(0.3);
 
   return (
     <div className="flex flex-col h-svh justify-between relative z-10">
@@ -16,14 +57,14 @@ export function Hero() {
         <Pill className="mb-6">ПСИХОЛОГ · СОЦИАЛЬНАЯ ПСИХОЛОГИЯ · ВЛАДИВОСТОК И ОНЛАЙН</Pill>
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sentient max-w-[800px] mx-auto leading-tight text-[#c9a84c]">
           Вы справляетесь. Но внутри —{" "}
-          <i className="font-light">давно не спокойно.</i>
+          <TypedText />
         </h1>
         <p className="font-mono text-base sm:text-lg text-foreground/75 text-balance mt-8 max-w-[460px] mx-auto">
           Усталость без причины. Тревога. Ощущение, что живёте «не своей жизнью».
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-          <a href="#contact">
+          <a ref={magBtn1 as React.RefObject<HTMLAnchorElement>} href="#contact">
             <Button
               onMouseEnter={() => setHovering(true)}
               onMouseLeave={() => setHovering(false)}
@@ -31,7 +72,7 @@ export function Hero() {
               [Записаться бесплатно →]
             </Button>
           </a>
-          <a href="#about">
+          <a ref={magBtn2 as React.RefObject<HTMLAnchorElement>} href="#about">
             <Button
               variant="ghost"
               className="font-mono text-foreground/60 hover:text-foreground uppercase text-sm"

@@ -1,27 +1,35 @@
 import { Button } from "@/components/ui/button";
+import { useCounter } from "@/hooks/useCounter";
+import { useParallax } from "@/hooks/useParallax";
 
-const stats = [
-  { value: "5 лет", label: "практики" },
-  { value: "100+", label: "клиентов" },
-  { value: "МЦПО", label: "диплом психолога" },
-];
+function StatCounter({ target, suffix, label }: { target: number; suffix: string; label: string }) {
+  const { value, ref } = useCounter(target);
+  return (
+    <div className="flex flex-col gap-1">
+      <span ref={ref as React.RefObject<HTMLSpanElement>} className="font-sentient text-2xl text-[#c9a84c]">
+        {value}{suffix}
+      </span>
+      <span className="font-mono text-xs text-[#c9a84c]/60 uppercase">{label}</span>
+    </div>
+  );
+}
 
 export function About() {
+  const photoRef = useParallax(0.025);
   return (
     <section id="about" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
         {/* Фото */}
         <div className="relative">
-          {/* Золотое свечение */}
           <div className="absolute -inset-3 rounded-3xl opacity-60 blur-2xl"
             style={{ background: 'radial-gradient(ellipse at center, rgba(201,168,76,0.35) 0%, rgba(201,168,76,0.1) 50%, transparent 75%)' }}
           />
-          {/* Золотая рамка */}
           <div className="absolute -inset-[1px] rounded-3xl"
             style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.6) 0%, transparent 40%, transparent 60%, rgba(201,168,76,0.4) 100%)' }}
           />
           <img
+            ref={photoRef as React.RefObject<HTMLImageElement>}
             src="https://cdn.poehali.dev/projects/4c5d8224-14ac-4df6-8232-895419dd60d5/bucket/74a42d7a-c781-437d-9022-9677ddd7b994.png"
             alt="Ольга Разумова — психолог"
             className="relative rounded-3xl w-full aspect-[3/4] object-cover"
@@ -50,16 +58,14 @@ export function About() {
             Моя задача — не дать совет, а помочь вам услышать себя.
           </p>
 
-          {/* Статы */}
+          {/* Анимированные счётчики */}
           <div className="grid grid-cols-3 gap-4 mt-4 border-t border-foreground/10 pt-6">
-            {stats.map((s) => (
-              <div key={s.label} className="flex flex-col gap-1">
-                <span className="font-sentient text-2xl">{s.value}</span>
-                <span className="font-mono text-xs text-[#c9a84c]/60 uppercase">
-                  {s.label}
-                </span>
-              </div>
-            ))}
+            <StatCounter target={5} suffix=" лет" label="практики" />
+            <StatCounter target={100} suffix="+" label="клиентов" />
+            <div className="flex flex-col gap-1">
+              <span className="font-sentient text-2xl text-[#c9a84c]">МЦПО</span>
+              <span className="font-mono text-xs text-[#c9a84c]/60 uppercase">диплом психолога</span>
+            </div>
           </div>
         </div>
       </div>
