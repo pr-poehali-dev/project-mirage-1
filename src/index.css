@@ -6,10 +6,10 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 197 43% 5%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 0%;
+    --card: 197 43% 5%;
     --card-foreground: 0 0% 100%;
 
     --popover: 0 0% 0%;
@@ -113,6 +113,6 @@
   background: radial-gradient(
     ellipse at center,
     transparent 30%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(6, 13, 17, 0.7) 100%
   );
 }
