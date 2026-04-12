@@ -1,35 +1,42 @@
+import { useState } from "react";
+import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/useReveal";
 
-// Укорачиваем длинные отзывы до читаемого размера
 const testimonials = [
   {
     name: "Mila лифт Sv",
-    text: "Я в полном восторге от практики с Ольгой! Ольга вернула мне моего «спортсмена». Мы копнули глубинные слои психики, отыскали установки, которые нужно двигать. Благодарна за бережное, тёплое общение!",
+    text: "Я в полном восторге от практики с Ольгой! Это что-то невероятное!!!\nОльга, у тебя дар от Бога!\n2.5 часа работы 😄\nМоей благодарности нет границ.\n\nМы столько всего исследовали. Ольга вернула мне моего «спортсмена», который на графике в адском минусе. Мы копнули глубинные слои моей психики, отыскали установки, которые однозначно нужно анализировать, и возможно двигать.\nБлагодаря нашей сессии я посмотрела на своё привычное поведение через призму стратегий.\nМы поговорили о моей большой цели и о путях её достижения.\nТак же благодарна за бережное, тёплое общение! 🙏",
   },
   {
     name: "Ольга Груздева",
-    text: "Удивительно как она филигранно подсветила мне что стратегия спортсмена меня может вытащить из сложной жизненной ямы. Ещё показала каким может быть мой страт и как перестать его отрицать. Есть о чём подумать.",
+    text: "Всем привет! Хочу поделиться!\nВчера сдалась целиком и полностью Ольге.\nУдивительно как она филигранно подсветила мне что стратегия спортсмена меня может вытащить из сложной жизненной ямы, я не видела до этого что использую именно её в сложных ситуациях.\nЕще показала мне каким может быть мой страт и как перестать его отрицать. Есть о чём подумать 😍\nОля благодарю сердечно!",
   },
   {
     name: "Наталья Лысова",
-    text: "Ты чётко вела меня своими вопросами, я погрузилась и в итоге даже примеры привела, которые вроде и знала, но сейчас они точно подсветили мою точку Б.",
+    text: "Ольга, благодарю ещё раз за встречу 😍\nТы чётко вела меня своими вопросами, я погрузилась и в итоге даже примеры привела, которые вроде и знала, но сейчас они точно подсветили мою точку Б 🔥 машину так быстро не поменяю, но шкаф почистить уже могу 😄",
   },
   {
     name: "Мария Хозяева",
-    text: "Это было так глубоко, так ценно, столько осознаний. Благодаря диагностике я выявила минусы и как их повернуть в плюсы. Ты очень внимательный специалист, твоя включённость поражает.",
+    text: "Оля, я от всей души благодарю тебя за консультацию. Это было так глубоко, так ценно, столько осознаний, пониманий программ, которые тормозят, благодаря диагностики я выявила минусы и как их можно повернуть в плюсы. Я задумалась совсем с другой стороны о многих сферах своей жизни. Ты очень внимательный специалист, твоя включённость поражает. Мне безумно понравилось работать с тобой!",
   },
   {
     name: "Юлия Плотникова",
-    text: "Мы глубоко разобрали мои стратегические лифты. Задание с персонажами оказалось прорывным: ассоциации с героями помогли увидеть, как я повторяю паттерны. Это изменило взгляд на прошлые неудачи.",
+    text: "Оля, благодарю тебя за нашу работу, инструмент мне понравился!\nМы глубоко разобрали мои стратегические лифты. Я осознала, что мой основной — отношения, и это стало настоящей опорой для принятия решений.\nЗадание с персонажами из любимых историй (книг, фильмов) оказалось прорывным: ассоциации с героями помогли увидеть, как я повторяю паттерны. Например, Золушка для меня — символ внутренней силы, а не жертвы. Это изменило взгляд на прошлые неудачи.",
   },
   {
     name: "Виктория",
-    text: "Я до сих пор не могу отойти от встречи. Олечка, спасибо тебе огромное — ты огонь! Я заново родилась. Знаю, что это только начало.",
+    text: "Всем доброе время суток! Хочу поблагодарить девочек и себя!\nБольшое спасибо за сессию.\nВчера мы встречались, и я до сих пор не могу отойти от встречи — я в шоке. Мой шопоголизм связан с моими отношениями с отцом... Вчера меня весь день трясло. Потом сидела в машине и почувствовала, как мы с ним поговорили и как он меня обнимал. У меня такое ощущение, что я двинулась головой 🤣 (сейчас и смеюсь, и плачу). Я ощущаю, что он рядом.\nОлечка, спасибо тебе огромное, ты — огонь! 🔥🔥🔥\nЯ заново родилась. Знаю, что это только начало. 🙏",
   },
 ];
 
 export function Testimonials() {
+  const [current, setCurrent] = useState(0);
   const ref = useReveal();
+
+  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+
+  const t = testimonials[current];
 
   return (
     <section ref={ref} className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.75)", backdropFilter: "blur(12px)" }}>
@@ -41,43 +48,47 @@ export function Testimonials() {
           Что говорят клиенты
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="flex flex-col gap-5 rounded-2xl p-6 border transition-all duration-300"
-              style={{
-                background: "rgba(255,255,255,0.03)",
-                borderColor: "rgba(255,255,255,0.1)",
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.07)";
-                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(201,168,76,0.35)";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.03)";
-                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.1)";
-              }}
-            >
-              {/* Кавычка */}
-              <span className="font-sentient text-5xl text-[#c9a84c]/30 leading-none select-none">"</span>
-
-              {/* Текст */}
-              <p className="text-foreground/80 leading-relaxed text-base flex-1">
-                {t.text}
-              </p>
-
-              {/* Автор */}
-              <div className="flex items-center gap-3 pt-4 border-t border-foreground/10">
-                <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-sentient text-base text-[#c9a84c]"
-                  style={{ background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.25)" }}
-                >
-                  {t.name[0]}
-                </div>
-                <span className="font-mono text-sm text-foreground/60">{t.name}</span>
+        <div className="max-w-2xl mx-auto">
+          <div className="border border-foreground/10 rounded-2xl p-8 md:p-10 flex flex-col gap-6" style={{ background: "rgba(0,38,46,0.8)" }}>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-[#4a7c6f]/30 border border-[#4a7c6f]/40 flex items-center justify-center font-sentient text-lg text-[#4a7c6f]">
+                {t.name[0]}
               </div>
+              <span className="font-mono text-sm text-foreground/70">{t.name}</span>
             </div>
-          ))}
+
+            <p className="text-foreground/85 leading-relaxed whitespace-pre-line text-base md:text-lg">
+              {t.text}
+            </p>
+          </div>
+
+          <div className="flex items-center justify-between mt-8">
+            <button
+              onClick={prev}
+              className="w-10 h-10 rounded-full border border-foreground/20 flex items-center justify-center hover:border-foreground/40 transition-colors"
+            >
+              <Icon name="ChevronLeft" size={18} />
+            </button>
+
+            <div className="flex gap-2">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    i === current ? "bg-[#4a7c6f]" : "bg-foreground/20"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={next}
+              className="w-10 h-10 rounded-full border border-foreground/20 flex items-center justify-center hover:border-foreground/40 transition-colors"
+            >
+              <Icon name="ChevronRight" size={18} />
+            </button>
+          </div>
         </div>
       </div>
     </section>
