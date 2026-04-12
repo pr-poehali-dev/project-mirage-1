@@ -32,7 +32,7 @@ export function ContactForm() {
     <section id="contact" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
       <div className="max-w-xl mx-auto">
-        <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
+        <p className="font-mono text-sm uppercase text-[#c9a84c] text-center tracking-widest mb-4">
           Контакты
         </p>
         <h2 className="font-sentient text-4xl md:text-5xl text-center mb-4">
@@ -48,16 +48,20 @@ export function ContactForm() {
             href="https://t.me/igraol"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 border border-foreground/10 rounded-xl px-5 py-3 font-mono text-sm text-foreground/60 hover:text-[#c9a84c] hover:border-[#c9a84c]/40 transition-all duration-200 w-full sm:w-auto justify-center"
-            style={{ background: 'rgba(255,255,255,0.03)' }}
+            className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
+            style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.65)'}
+            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.3)'}
           >
             <Icon name="Send" size={15} />
             Написать в Telegram
           </a>
           <a
             href="tel:+79142755070"
-            className="flex items-center gap-2 border border-foreground/10 rounded-xl px-5 py-3 font-mono text-sm text-foreground/60 hover:text-[#c9a84c] hover:border-[#c9a84c]/40 transition-all duration-200 w-full sm:w-auto justify-center"
-            style={{ background: 'rgba(255,255,255,0.03)' }}
+            className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
+            style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.65)'}
+            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.3)'}
           >
             <Icon name="Phone" size={15} />
             +7 914 275-50-70
@@ -92,21 +96,30 @@ export function ContactForm() {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               required
-              className="bg-foreground/[0.03] border-foreground/10 rounded-xl h-12 font-mono text-sm placeholder:text-foreground/30 focus-visible:border-[#4a7c6f]"
+              className="rounded-xl h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+              onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
+              onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
             />
             <Input
               placeholder="Телефон или Telegram"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               required
-              className="bg-foreground/[0.03] border-foreground/10 rounded-xl h-12 font-mono text-sm placeholder:text-foreground/30 focus-visible:border-[#4a7c6f]"
+              className="rounded-xl h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+              onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
+              onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
             />
             <Textarea
               placeholder="С чем хотите поработать? (необязательно)"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows={4}
-              className="bg-foreground/[0.03] border-foreground/10 rounded-xl font-mono text-sm placeholder:text-foreground/30 focus-visible:border-[#4a7c6f] resize-none"
+              className="rounded-xl font-mono text-base placeholder:text-foreground/50 transition-all duration-200 resize-none"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+              onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
+              onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
             />
 
             {status === "error" && (
