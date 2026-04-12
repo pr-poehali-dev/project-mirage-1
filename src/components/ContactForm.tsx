@@ -31,7 +31,7 @@ export function ContactForm() {
   };
 
   return (
-    <section ref={ref} id="contact" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(4px)'}}>
+    <section ref={ref} id="contact" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
       <div className="max-w-xl mx-auto">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">

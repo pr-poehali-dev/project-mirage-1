@@ -127,7 +127,7 @@ export function PainPoints() {
   const ref = useReveal();
 
   return (
-    <section ref={ref} className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,48,57,0.35)', backdropFilter: 'blur(4px)'}}>
+    <section ref={ref} className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,48,57,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/70 text-center tracking-widest mb-12">
           Узнаёте себя?
