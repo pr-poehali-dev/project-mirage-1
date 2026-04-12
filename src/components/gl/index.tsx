@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { Particles } from "./particles";
+import { GoldDots } from "./GoldDots";
 
 // Static control values (originally from leva)
 const controls = {
@@ -66,6 +67,7 @@ export const GL = ({ hovering }: { hovering: boolean }) => {
           manualTime={manualTime}
           introspect={hovering}
         />
+        <GoldDots />
       </Canvas>
     </div>
   );
