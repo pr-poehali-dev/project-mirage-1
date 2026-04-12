@@ -7,16 +7,22 @@ import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { HowIWork } from "@/components/HowIWork";
 import { FAQ } from "@/components/FAQ";
+import { SectionCTA } from "@/components/SectionCTA";
 
 export default function Index() {
   return (
     <div className="relative">
       <Hero />
       <PainPoints />
+      <SectionCTA />
       <About />
+      <SectionCTA />
       <HowIWork />
+      <SectionCTA />
       <Services />
+      <SectionCTA />
       <Testimonials />
+      <SectionCTA />
       <FAQ />
       <ContactForm />
       <Footer />
