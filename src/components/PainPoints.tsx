@@ -126,7 +126,7 @@ export function PainPoints() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,48,57,0.35)', backdropFilter: 'blur(1px)'}}>
+    <section className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,48,57,0.45)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/70 text-center tracking-widest mb-12">
           Узнаёте себя?
