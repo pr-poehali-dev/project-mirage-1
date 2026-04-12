@@ -1,14 +1,16 @@
+import { useState } from "react";
+
 const pains = [
   {
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-        <circle cx="24" cy="24" r="20" fill="url(#g1)" opacity="0.15"/>
-        <path d="M24 12 C24 12 16 18 16 26 C16 30.4 19.6 34 24 34 C28.4 34 32 30.4 32 26 C32 18 24 12 24 12Z" fill="url(#g1)" opacity="0.6"/>
-        <path d="M20 26 C20 26 22 24 24 26 C26 28 28 26 28 26" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M24 34 L24 38" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <circle cx="32" cy="32" r="28" fill="url(#g1)" opacity="0.12"/>
+        <path d="M32 14 C32 14 20 22 20 34 C20 40.6 25.4 46 32 46 C38.6 46 44 40.6 44 34 C44 22 32 14 32 14Z" fill="url(#g1)" opacity="0.55"/>
+        <path d="M26 34 C26 34 29 31 32 34 C35 37 38 34 38 34" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M32 46 L32 52" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
         <defs>
-          <linearGradient id="g1" x1="16" y1="12" x2="32" y2="34" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#c9a84c"/>
+          <linearGradient id="g1" x1="20" y1="14" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#e8c97a"/>
             <stop offset="1" stopColor="#7a5c1e"/>
           </linearGradient>
         </defs>
@@ -19,16 +21,16 @@ const pains = [
   },
   {
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-        <circle cx="24" cy="24" r="20" fill="url(#g2)" opacity="0.15"/>
-        <path d="M24 14 C20 14 17 17 17 21 C17 23 18 25 20 26.5 L24 30 L28 26.5 C30 25 31 23 31 21 C31 17 28 14 24 14Z" fill="url(#g2)" opacity="0.7"/>
-        <circle cx="24" cy="24" r="2" fill="#c9a84c" opacity="0.4"/>
-        <path d="M24 8 L24 11" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
-        <path d="M14 14 L16.5 16.5" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
-        <path d="M34 14 L31.5 16.5" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <circle cx="32" cy="32" r="28" fill="url(#g2)" opacity="0.12"/>
+        <path d="M32 18 C26 18 21 23 21 29 C21 32 22.5 35 25.5 37.5 L32 43 L38.5 37.5 C41.5 35 43 32 43 29 C43 23 38 18 32 18Z" fill="url(#g2)" opacity="0.65"/>
+        <circle cx="32" cy="32" r="3" fill="#c9a84c" opacity="0.4"/>
+        <path d="M32 8 L32 13" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.35"/>
+        <path d="M18 18 L21.5 21.5" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.35"/>
+        <path d="M46 18 L42.5 21.5" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.35"/>
         <defs>
-          <linearGradient id="g2" x1="17" y1="14" x2="31" y2="30" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#c9a84c"/>
+          <linearGradient id="g2" x1="21" y1="18" x2="43" y2="43" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#e8c97a"/>
             <stop offset="1" stopColor="#7a5c1e"/>
           </linearGradient>
         </defs>
@@ -39,17 +41,17 @@ const pains = [
   },
   {
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-        <circle cx="24" cy="24" r="20" fill="url(#g3)" opacity="0.15"/>
-        <circle cx="24" cy="24" r="10" stroke="url(#g3)" strokeWidth="1.5" opacity="0.6"/>
-        <circle cx="24" cy="24" r="5" fill="url(#g3)" opacity="0.4"/>
-        <path d="M24 14 L24 10" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
-        <path d="M24 34 L24 38" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
-        <path d="M14 24 L10 24" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
-        <path d="M34 24 L38 24" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <circle cx="32" cy="32" r="28" fill="url(#g3)" opacity="0.12"/>
+        <circle cx="32" cy="32" r="14" stroke="url(#g3)" strokeWidth="2" opacity="0.55"/>
+        <circle cx="32" cy="32" r="6" fill="url(#g3)" opacity="0.4"/>
+        <path d="M32 18 L32 12" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
+        <path d="M32 46 L32 52" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
+        <path d="M18 32 L12 32" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
+        <path d="M46 32 L52 32" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
         <defs>
-          <linearGradient id="g3" x1="14" y1="14" x2="34" y2="34" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#c9a84c"/>
+          <linearGradient id="g3" x1="18" y1="18" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#e8c97a"/>
             <stop offset="1" stopColor="#7a5c1e"/>
           </linearGradient>
         </defs>
@@ -61,24 +63,48 @@ const pains = [
 ];
 
 export function PainPoints() {
+  const [hovered, setHovered] = useState<number | null>(null);
+
   return (
     <section className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,48,57,0.75)', backdropFilter: 'blur(12px)'}}>
       <div className="container">
-      <p className="font-mono text-sm uppercase text-[#c9a84c]/70 text-center tracking-widest mb-12">
-        Узнаёте себя?
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-        {pains.map((pain) => (
-          <div
-            key={pain.title}
-            className="border border-foreground/10 rounded-2xl p-6 flex flex-col gap-4 bg-foreground/[0.03] hover:bg-foreground/[0.06] transition-colors"
-          >
-            <div className="w-12 h-12 flex items-center justify-center">{pain.icon}</div>
-            <h3 className="font-sentient text-xl text-[#c9a84c]">{pain.title}</h3>
-            <p className="font-mono text-base text-foreground/70">{pain.text}</p>
-          </div>
-        ))}
-      </div>
+        <p className="font-mono text-sm uppercase text-[#c9a84c]/70 text-center tracking-widest mb-12">
+          Узнаёте себя?
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          {pains.map((pain, i) => (
+            <div
+              key={pain.title}
+              onMouseEnter={() => setHovered(i)}
+              onMouseLeave={() => setHovered(null)}
+              className="relative border border-foreground/10 rounded-2xl p-8 flex flex-col gap-5 bg-foreground/[0.03] transition-all duration-300 overflow-hidden cursor-default"
+              style={{
+                borderColor: hovered === i ? 'rgba(201,168,76,0.4)' : undefined,
+                background: hovered === i ? 'rgba(201,168,76,0.06)' : undefined,
+              }}
+            >
+              {/* Подсветка-glow за иконкой */}
+              <div
+                className="absolute top-4 left-6 w-20 h-20 rounded-full transition-all duration-500 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(circle, rgba(201,168,76,0.25) 0%, transparent 70%)',
+                  opacity: hovered === i ? 1 : 0,
+                  transform: hovered === i ? 'scale(1.3)' : 'scale(0.8)',
+                }}
+              />
+
+              <div
+                className="relative w-16 h-16 flex items-center justify-center transition-transform duration-300"
+                style={{ transform: hovered === i ? 'scale(1.12) translateY(-2px)' : 'scale(1)' }}
+              >
+                {pain.icon}
+              </div>
+
+              <h3 className="font-sentient text-xl text-[#c9a84c]">{pain.title}</h3>
+              <p className="font-mono text-base text-foreground/70">{pain.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
