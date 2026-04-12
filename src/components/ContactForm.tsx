@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Icon from "@/components/ui/icon";
 
 export function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
@@ -37,9 +38,37 @@ export function ContactForm() {
         <h2 className="font-sentient text-4xl md:text-5xl text-center mb-4">
           Запишитесь на консультацию
         </h2>
-        <p className="font-mono text-base text-foreground/70 text-center mb-12">
+        <p className="font-mono text-base text-foreground/70 text-center mb-8">
           Отвечу в течение нескольких часов и согласую удобное время
         </p>
+
+        {/* Альтернативные контакты */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <a
+            href="https://t.me/igraol"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border border-foreground/10 rounded-xl px-5 py-3 font-mono text-sm text-foreground/60 hover:text-[#c9a84c] hover:border-[#c9a84c]/40 transition-all duration-200 w-full sm:w-auto justify-center"
+            style={{ background: 'rgba(255,255,255,0.03)' }}
+          >
+            <Icon name="Send" size={15} />
+            Написать в Telegram
+          </a>
+          <a
+            href="tel:+79142755070"
+            className="flex items-center gap-2 border border-foreground/10 rounded-xl px-5 py-3 font-mono text-sm text-foreground/60 hover:text-[#c9a84c] hover:border-[#c9a84c]/40 transition-all duration-200 w-full sm:w-auto justify-center"
+            style={{ background: 'rgba(255,255,255,0.03)' }}
+          >
+            <Icon name="Phone" size={15} />
+            +7 914 275-50-70
+          </a>
+        </div>
+
+        <div className="flex items-center gap-4 mb-8">
+          <div className="flex-1 h-px bg-foreground/10" />
+          <span className="font-mono text-xs text-foreground/30 uppercase tracking-widest">или заполните форму</span>
+          <div className="flex-1 h-px bg-foreground/10" />
+        </div>
 
         {status === "success" ? (
           <div className="border border-[#4a7c6f]/40 bg-[#4a7c6f]/10 rounded-2xl p-10 text-center flex flex-col gap-3">

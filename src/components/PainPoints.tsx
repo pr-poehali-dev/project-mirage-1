@@ -130,20 +130,20 @@ export function PainPoints() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/70 text-center tracking-widest mb-12">
           Узнаёте себя?
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {pains.map((pain, i) => (
             <div
               key={pain.title}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
-              className="relative border rounded-2xl p-8 flex flex-col gap-5 transition-all duration-300 overflow-hidden cursor-default"
+              className="relative border rounded-2xl p-5 flex flex-col gap-3 transition-all duration-300 overflow-hidden cursor-default"
               style={{
                 borderColor: hovered === i ? 'rgba(201,168,76,0.45)' : 'rgba(255,255,255,0.1)',
                 background: hovered === i ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.03)',
               }}
             >
               <div
-                className="absolute top-4 left-6 w-20 h-20 rounded-full transition-all duration-500 pointer-events-none"
+                className="absolute top-3 left-4 w-14 h-14 rounded-full transition-all duration-500 pointer-events-none"
                 style={{
                   background: 'radial-gradient(circle, rgba(201,168,76,0.25) 0%, transparent 70%)',
                   opacity: hovered === i ? 1 : 0,
@@ -151,13 +151,15 @@ export function PainPoints() {
                 }}
               />
               <div
-                className="relative w-16 h-16 flex items-center justify-center transition-transform duration-300"
+                className="relative w-11 h-11 flex items-center justify-center transition-transform duration-300"
                 style={{ transform: hovered === i ? 'scale(1.12) translateY(-2px)' : 'scale(1)' }}
               >
-                {pain.icon}
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-11 h-11">
+                  {(pain.icon as React.ReactElement).props.children}
+                </svg>
               </div>
-              <h3 className="font-sentient text-xl text-[#c9a84c]">{pain.title}</h3>
-              <p className="font-mono text-base text-foreground/70">{pain.text}</p>
+              <h3 className="font-sentient text-lg text-[#c9a84c]">{pain.title}</h3>
+              <p className="font-mono text-sm text-foreground/70">{pain.text}</p>
             </div>
           ))}
         </div>
