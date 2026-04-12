@@ -5,6 +5,7 @@ import { PainPoints } from "@/components/PainPoints";
 import { Testimonials } from "@/components/Testimonials";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
+import { HowIWork } from "@/components/HowIWork";
 
 export default function Index() {
   return (
@@ -12,6 +13,7 @@ export default function Index() {
       <Hero />
       <PainPoints />
       <About />
+      <HowIWork />
       <Services />
       <Testimonials />
       <ContactForm />
