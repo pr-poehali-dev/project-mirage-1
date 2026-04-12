@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
+import { Button } from "@/components/ui/button";
 
 const faqs = [
   {
@@ -33,7 +34,7 @@ export function FAQ() {
 
   return (
     <section
-      className="relative z-10 py-24 md:py-32"
+      className="relative z-10 py-14 md:py-20"
       style={{ background: 'rgba(0,48,57,0.35)', backdropFilter: 'blur(1px)' }}
     >
       <div className="container">
@@ -77,6 +78,11 @@ export function FAQ() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <a href="#contact">
+            <Button>[Записаться бесплатно →]</Button>
+          </a>
         </div>
       </div>
     </section>

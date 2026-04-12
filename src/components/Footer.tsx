@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 export function Footer() {
   return (
     <footer
-      className="relative z-10 py-12 border-t border-foreground/10"
+      className="relative z-10 py-8 border-t border-foreground/10"
       style={{ background: 'rgba(0,28,34,0.5)', backdropFilter: 'blur(1px)' }}
     >
       <div className="container">

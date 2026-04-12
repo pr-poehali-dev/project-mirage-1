@@ -14,15 +14,10 @@ export default function Index() {
     <div className="relative">
       <Hero />
       <PainPoints />
-      <SectionCTA />
       <About />
-      <SectionCTA />
       <HowIWork />
-      <SectionCTA />
       <Services />
-      <SectionCTA />
       <Testimonials />
-      <SectionCTA />
       <FAQ />
       <ContactForm />
       <Footer />

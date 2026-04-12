@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -37,7 +38,7 @@ export function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.35)", backdropFilter: "blur(1px)" }}>
+    <section className="relative z-10 py-14 md:py-20" style={{ background: "rgba(0,48,57,0.35)", backdropFilter: "blur(1px)" }}>
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Отзывы
@@ -101,6 +102,12 @@ export function Testimonials() {
             >
               <Icon name="ChevronRight" size={18} />
             </button>
+          </div>
+
+          <div className="flex justify-center mt-10">
+            <a href="#contact">
+              <Button>[Записаться бесплатно →]</Button>
+            </a>
           </div>
         </div>
       </div>

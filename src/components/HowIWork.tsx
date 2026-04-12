@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const steps = [
   {
     number: "01",
@@ -25,7 +27,7 @@ export function HowIWork() {
   return (
     <section
       id="approach"
-      className="relative z-10 py-24 md:py-32"
+      className="relative z-10 py-14 md:py-20"
       style={{ background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)' }}
     >
       <div className="container">
@@ -67,7 +69,11 @@ export function HowIWork() {
           ))}
         </div>
 
-
+        <div className="flex justify-center mt-10">
+          <a href="#contact">
+            <Button>[Записаться бесплатно →]</Button>
+          </a>
+        </div>
       </div>
     </section>
   );
