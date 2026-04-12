@@ -60,6 +60,7 @@ html {
     @apply text-foreground;
     font-family: "Raleway", sans-serif;
     background: transparent;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
   }
 
   html {
@@ -92,6 +93,11 @@ html {
   .shadow-glow {
     box-shadow: 0 0 8px 2px var(--tw-shadow-color);
   }
+}
+
+/* Золотые разделители между секциями */
+.relative.z-10 + .relative.z-10 {
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
 }
 
 /* Анимация появления секций */

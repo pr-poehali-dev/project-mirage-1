@@ -62,11 +62,11 @@ export function Services() {
             className="relative rounded-2xl border p-6 flex flex-col gap-4 transition-all duration-300"
             style={{
               borderColor: hovered === i
-                ? s.highlight ? 'rgba(74,124,111,0.8)' : 'rgba(201,168,76,0.45)'
-                : s.highlight ? 'rgba(74,124,111,0.6)' : 'rgba(255,255,255,0.1)',
+                ? s.highlight ? 'rgba(74,124,111,0.9)' : 'rgba(201,168,76,0.55)'
+                : s.highlight ? 'rgba(74,124,111,0.7)' : 'rgba(255,255,255,0.18)',
               background: hovered === i
-                ? s.highlight ? 'rgba(74,124,111,0.18)' : 'rgba(255,255,255,0.1)'
-                : s.highlight ? 'rgba(74,124,111,0.1)' : 'rgba(255,255,255,0.03)',
+                ? s.highlight ? 'rgba(74,124,111,0.25)' : 'rgba(255,255,255,0.14)'
+                : s.highlight ? 'rgba(74,124,111,0.15)' : 'rgba(255,255,255,0.08)',
             }}
           >
             {s.popular && (

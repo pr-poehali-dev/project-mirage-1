@@ -14,7 +14,7 @@ export function Hero() {
 
       <div className="pb-16 mt-auto text-center relative">
         <Pill className="mb-6">ПСИХОЛОГ · СОЦИАЛЬНАЯ ПСИХОЛОГИЯ · ВЛАДИВОСТОК И ОНЛАЙН</Pill>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-sentient max-w-[700px] mx-auto">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sentient max-w-[800px] mx-auto leading-tight">
           Вы справляетесь. Но внутри —{" "}
           <i className="font-light">давно не спокойно.</i>
         </h1>

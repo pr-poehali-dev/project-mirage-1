@@ -138,8 +138,8 @@ export function PainPoints() {
               onMouseLeave={() => setHovered(null)}
               className="relative border rounded-2xl p-5 flex flex-col gap-3 transition-all duration-300 overflow-hidden cursor-default"
               style={{
-                borderColor: hovered === i ? 'rgba(201,168,76,0.45)' : 'rgba(255,255,255,0.1)',
-                background: hovered === i ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.03)',
+                borderColor: hovered === i ? 'rgba(201,168,76,0.55)' : 'rgba(255,255,255,0.18)',
+                background: hovered === i ? 'rgba(255,255,255,0.14)' : 'rgba(255,255,255,0.08)',
               }}
             >
               <div
