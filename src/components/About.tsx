@@ -6,7 +6,7 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.97)'}}>
+    <section id="about" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.75)', backdropFilter: 'blur(12px)'}}>
       <div className="container">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
         {/* Фото */}

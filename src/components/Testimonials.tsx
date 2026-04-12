@@ -37,7 +37,7 @@ export function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.95)" }}>
+    <section className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.75)", backdropFilter: "blur(12px)" }}>
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Отзывы
