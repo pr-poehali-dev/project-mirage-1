@@ -6,7 +6,8 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="container py-24 md:py-32">
+    <section id="about" className="relative z-10 py-24 md:py-32 bg-white/5 backdrop-blur-sm">
+      <div className="container">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
         {/* Фото */}
         <div className="relative">
@@ -52,6 +53,7 @@ export function About() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
