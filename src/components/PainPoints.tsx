@@ -77,10 +77,10 @@ export function PainPoints() {
               key={pain.title}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
-              className="relative border border-foreground/10 rounded-2xl p-8 flex flex-col gap-5 bg-foreground/[0.03] transition-all duration-300 overflow-hidden cursor-default"
+              className="relative border rounded-2xl p-8 flex flex-col gap-5 transition-all duration-300 overflow-hidden cursor-default"
               style={{
-                borderColor: hovered === i ? 'rgba(201,168,76,0.4)' : undefined,
-                background: hovered === i ? 'rgba(201,168,76,0.06)' : undefined,
+                borderColor: hovered === i ? 'rgba(201,168,76,0.45)' : 'rgba(255,255,255,0.1)',
+                background: hovered === i ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.03)',
               }}
             >
               {/* Подсветка-glow за иконкой */}

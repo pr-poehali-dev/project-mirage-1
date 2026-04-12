@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -40,6 +41,8 @@ const services = [
 ];
 
 export function Services() {
+  const [hovered, setHovered] = useState<number | null>(null);
+
   return (
     <section id="services" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,48,57,0.75)', backdropFilter: 'blur(12px)'}}>
       <div className="container">
@@ -51,14 +54,20 @@ export function Services() {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
-        {services.map((s) => (
+        {services.map((s, i) => (
           <div
             key={s.title}
-            className={`relative rounded-2xl border p-6 flex flex-col gap-4 transition-colors ${
-              s.highlight
-                ? "border-[#4a7c6f] bg-[#4a7c6f]/10"
-                : "border-foreground/10 bg-foreground/[0.03] hover:bg-foreground/[0.06]"
-            }`}
+            onMouseEnter={() => setHovered(i)}
+            onMouseLeave={() => setHovered(null)}
+            className="relative rounded-2xl border p-6 flex flex-col gap-4 transition-all duration-300"
+            style={{
+              borderColor: hovered === i
+                ? s.highlight ? 'rgba(74,124,111,0.8)' : 'rgba(201,168,76,0.45)'
+                : s.highlight ? 'rgba(74,124,111,0.6)' : 'rgba(255,255,255,0.1)',
+              background: hovered === i
+                ? s.highlight ? 'rgba(74,124,111,0.18)' : 'rgba(255,255,255,0.1)'
+                : s.highlight ? 'rgba(74,124,111,0.1)' : 'rgba(255,255,255,0.03)',
+            }}
           >
             {s.popular && (
               <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#4a7c6f] text-white font-mono text-xs px-4 py-1 rounded-full uppercase tracking-wider">
