@@ -49,7 +49,22 @@ export function Testimonials() {
         </h2>
 
         <div className="max-w-2xl mx-auto">
-          <div className="border border-foreground/10 rounded-2xl p-8 md:p-10 flex flex-col gap-6" style={{ background: "rgba(0,38,46,0.8)" }}>
+          <div
+            className="border rounded-2xl p-8 md:p-10 flex flex-col gap-6 transition-all duration-300"
+            style={{ background: "rgba(0,72,86,0.6)", borderColor: "rgba(255,255,255,0.12)" }}
+            onMouseEnter={e => {
+              const el = e.currentTarget as HTMLDivElement;
+              el.style.background = "rgba(0,90,108,0.7)";
+              el.style.borderColor = "rgba(201,168,76,0.5)";
+              el.style.boxShadow = "0 0 28px 0 rgba(201,168,76,0.12)";
+            }}
+            onMouseLeave={e => {
+              const el = e.currentTarget as HTMLDivElement;
+              el.style.background = "rgba(0,72,86,0.6)";
+              el.style.borderColor = "rgba(255,255,255,0.12)";
+              el.style.boxShadow = "none";
+            }}
+          >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#4a7c6f]/30 border border-[#4a7c6f]/40 flex items-center justify-center font-sentient text-lg text-[#4a7c6f]">
                 {t.name[0]}
