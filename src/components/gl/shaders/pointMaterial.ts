@@ -115,7 +115,16 @@ export class DofPointsMaterial extends THREE.ShaderMaterial {
 
         float alpha = (1.04 - clamp(vDistance, 0.0, 1.0)) * clamp(smoothstep(-0.5, 0.25, vPosY), 0.0, 1.0) * uOpacity * revealMask * uRevealProgress * sparkleBrightness;
 
-        gl_FragColor = vec4(vec3(1.0), mix(alpha, sparkleBrightness - 1.1, uTransition));
+        // Определяем золотые частицы по хэшу начальной позиции (~8%)
+        float goldHash = fract(sin(vInitialPosition.x * 91.3 + vInitialPosition.z * 47.7) * 28451.3);
+        float goldMask = step(0.92, goldHash); // 8% частиц золотые
+
+        // Золотой цвет с мерцанием
+        vec3 goldColor = vec3(0.95, 0.75, 0.2);
+        vec3 whiteColor = vec3(1.0);
+        vec3 particleColor = mix(whiteColor, goldColor, goldMask);
+
+        gl_FragColor = vec4(particleColor, mix(alpha, sparkleBrightness - 1.1, uTransition));
       }`,
       uniforms: {
         positions: { value: null },
