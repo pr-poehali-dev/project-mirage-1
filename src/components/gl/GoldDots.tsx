@@ -56,7 +56,7 @@ export function GoldDots() {
           vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
           gl_Position = projectionMatrix * mvPosition;
           float sizeMult = aIndex < 0.5 ? 1.0 : 0.6 + 0.4 * (1.0 - aIndex / 7.0);
-          gl_PointSize = 30.0 * sizeMult * (1.0 / -mvPosition.z);
+          gl_PointSize = 80.0 * sizeMult * (1.0 / -mvPosition.z);
           float flicker = 0.55 + 0.45 * sin(uTime * 2.8 + aIndex * 1.57);
           vAlpha = flicker;
         }
@@ -69,7 +69,7 @@ export function GoldDots() {
           float d = length(uv);
           float core = 1.0 - smoothstep(0.0, 0.13, d);
           float glow = 1.0 - smoothstep(0.0, 0.5, d);
-          float alpha = (core * 1.0 + glow * 0.7) * vAlpha;
+          float alpha = (core * 1.0 + glow * 0.9) * vAlpha;
           if (alpha < 0.01) discard;
           vec3 color = mix(vec3(0.98, 0.72, 0.12), vec3(1.0, 0.97, 0.75), core);
           gl_FragColor = vec4(color, alpha);
@@ -91,7 +91,7 @@ export function GoldDots() {
 
     // Движение группы слева направо, циклично
     const groupX = -8.0 + ((t * 0.5) % 16.0);
-    const groupZ = 1.5; // немного в глубину для видимости
+    const groupZ = -0.5; // ближе к камере
 
     // Волновое смещение центра — та же формула что в simulationMaterial
     const dx = periodicNoise(groupX * NOISE_SCALE, groupZ * NOISE_SCALE, [0, 0, 0], ct) * NOISE_INTENSITY;

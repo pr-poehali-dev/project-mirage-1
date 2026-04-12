@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer
       className="relative z-10 py-12 border-t border-foreground/10"
-      style={{ background: 'rgba(0,28,34,0.97)', backdropFilter: 'blur(12px)' }}
+      style={{ background: 'rgba(0,28,34,0.5)', backdropFilter: 'blur(4px)' }}
     >
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
