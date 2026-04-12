@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const steps = [
   {
     number: "01",
@@ -70,24 +72,7 @@ export function HowIWork() {
         {/* CTA */}
         <div className="text-center mt-4">
           <a href="#contact">
-            <button
-              className="font-mono text-sm border rounded-xl px-8 py-3 transition-all duration-200"
-              style={{
-                borderColor: 'rgba(201,168,76,0.35)',
-                color: 'rgba(201,168,76,0.8)',
-                background: 'rgba(201,168,76,0.05)',
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.12)';
-                (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(201,168,76,0.6)';
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.05)';
-                (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(201,168,76,0.35)';
-              }}
-            >
-              Начать с бесплатной встречи →
-            </button>
+            <Button>[Записаться бесплатно →]</Button>
           </a>
         </div>
       </div>
