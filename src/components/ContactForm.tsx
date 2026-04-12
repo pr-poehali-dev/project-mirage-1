@@ -31,13 +31,13 @@ export function ContactForm() {
     <section id="contact" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.97)'}}>
       <div className="container">
       <div className="max-w-xl mx-auto">
-        <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-4">
+        <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Контакты
         </p>
         <h2 className="font-sentient text-4xl md:text-5xl text-center mb-4">
           Запишитесь на консультацию
         </h2>
-        <p className="font-mono text-sm text-foreground/50 text-center mb-12">
+        <p className="font-mono text-base text-foreground/70 text-center mb-12">
           Отвечу в течение нескольких часов и согласую удобное время
         </p>
 

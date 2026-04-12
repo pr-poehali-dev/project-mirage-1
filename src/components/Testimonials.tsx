@@ -39,7 +39,7 @@ export function Testimonials() {
   return (
     <section className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.95)" }}>
       <div className="container">
-        <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-4">
+        <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Отзывы
         </p>
         <h2 className="font-sentient text-4xl md:text-5xl text-center mb-14">
@@ -55,7 +55,7 @@ export function Testimonials() {
               <span className="font-mono text-sm text-foreground/70">{t.name}</span>
             </div>
 
-            <p className="text-foreground/80 leading-relaxed whitespace-pre-line text-sm md:text-base">
+            <p className="text-foreground/85 leading-relaxed whitespace-pre-line text-base md:text-lg">
               {t.text}
             </p>
           </div>

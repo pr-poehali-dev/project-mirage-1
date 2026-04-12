@@ -18,7 +18,7 @@ export function Hero() {
           Вы справляетесь. Но внутри —{" "}
           <i className="font-light">давно не спокойно.</i>
         </h1>
-        <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[460px] mx-auto">
+        <p className="font-mono text-base sm:text-lg text-foreground/75 text-balance mt-8 max-w-[460px] mx-auto">
           Усталость без причины. Тревога. Ощущение, что живёте «не своей жизнью».
         </p>
 
@@ -42,7 +42,7 @@ export function Hero() {
           </a>
         </div>
 
-        <p className="font-mono text-xs text-foreground/40 mt-6">
+        <p className="font-mono text-sm text-[#c9a84c]/60 mt-6">
           100+ клиентов уже прошли путь к себе
         </p>
       </div>
