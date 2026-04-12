@@ -60,7 +60,7 @@ export function Services() {
             key={s.title}
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
-            className="relative rounded-2xl border p-6 flex flex-col gap-4 transition-all duration-300"
+            className="relative rounded-2xl border p-4 md:p-6 flex flex-col gap-4 transition-all duration-300"
             style={{
               borderColor: hovered === i
                 ? s.highlight ? 'rgba(74,124,111,0.9)' : 'rgba(201,168,76,0.55)'
@@ -81,13 +81,13 @@ export function Services() {
             </h3>
 
             <div className="border-b border-foreground/10 pb-4">
-              <span className="font-sentient text-2xl">{s.price}</span>
+              <span className="font-sentient text-xl md:text-2xl">{s.price}</span>
               {s.period && (
                 <span className="font-mono text-sm text-foreground/40 ml-2">{s.period}</span>
               )}
             </div>
 
-            <p className="font-mono text-base text-foreground/70 leading-relaxed flex-1">
+            <p className="font-mono text-sm md:text-base text-foreground/70 leading-relaxed flex-1">
               {s.description}
             </p>
 

@@ -44,13 +44,13 @@ export function Testimonials() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Отзывы
         </p>
-        <h2 className="font-sentient text-4xl md:text-5xl text-center mb-14">
+        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-14">
           Что говорят клиенты
         </h2>
 
         <div className="max-w-2xl mx-auto">
           <div
-            className="border rounded-2xl p-8 md:p-10 flex flex-col gap-6 transition-all duration-300"
+            className="border rounded-2xl p-5 md:p-10 flex flex-col gap-6 transition-all duration-300"
             style={{ background: "rgba(0,72,86,0.6)", borderColor: "rgba(255,255,255,0.12)" }}
             onMouseEnter={e => {
               const el = e.currentTarget as HTMLDivElement;
@@ -72,7 +72,7 @@ export function Testimonials() {
               <span className="font-mono text-sm text-foreground/70">{t.name}</span>
             </div>
 
-            <p className="text-foreground/85 leading-relaxed whitespace-pre-line text-sm md:text-base">
+            <p className="text-foreground/85 leading-relaxed whitespace-pre-line text-xs md:text-base">
               {t.text}
             </p>
           </div>

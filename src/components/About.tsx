@@ -7,7 +7,7 @@ function StatCounter({ target, suffix, label }: { target: number; suffix: string
   const { value, ref } = useCounter(target);
   return (
     <div className="flex flex-col gap-1">
-      <span ref={ref as React.RefObject<HTMLSpanElement>} className="font-sentient text-2xl text-[#c9a84c]">
+      <span ref={ref as React.RefObject<HTMLSpanElement>} className="font-sentient text-xl md:text-2xl text-[#c9a84c]">
         {value}{suffix}
       </span>
       <span className="font-mono text-xs text-[#c9a84c]/60 uppercase">{label}</span>
@@ -20,7 +20,7 @@ export function About() {
   return (
     <section id="about" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center max-w-5xl mx-auto">
         {/* Фото */}
         <div className="relative">
           <div className="absolute -inset-3 rounded-3xl opacity-60 blur-2xl"
@@ -42,18 +42,18 @@ export function About() {
           <p className="font-mono text-sm uppercase text-[#c9a84c]/80 tracking-widest">
             Обо мне
           </p>
-          <h2 className="font-sentient text-4xl md:text-5xl leading-tight">
+          <h2 className="font-sentient text-3xl md:text-5xl leading-tight">
             Ольга Разумова
           </h2>
           <p className="font-mono text-sm text-[#c9a84c]/60 uppercase tracking-wider">
             Психолог · Социальная психология
           </p>
 
-          <p className="text-foreground/80 leading-relaxed text-balance text-base md:text-lg">
+          <p className="text-foreground/80 leading-relaxed text-balance text-sm md:text-lg">
             Я помогаю взрослым выйти из состояния хронической усталости, тревоги
             и внутреннего конфликта — туда, где снова появляется энергия и ясность.
           </p>
-          <p className="text-foreground/80 leading-relaxed text-balance text-base md:text-lg">
+          <p className="text-foreground/80 leading-relaxed text-balance text-sm md:text-lg">
             В работе использую <span className="text-foreground">интегративный подход</span> —
             сочетаю разные методы под конкретного человека, без шаблонов и готовых ответов.
             Моя задача — не дать совет, а помочь вам услышать себя.
@@ -64,7 +64,7 @@ export function About() {
             <StatCounter target={5} suffix=" лет" label="практики" />
             <StatCounter target={100} suffix="+" label="клиентов" />
             <div className="flex flex-col gap-1">
-              <span className="font-sentient text-2xl text-[#c9a84c]">МЦПО</span>
+              <span className="font-sentient text-xl md:text-2xl text-[#c9a84c]">МЦПО</span>
               <span className="font-mono text-xs text-[#c9a84c]/60 uppercase">диплом психолога</span>
             </div>
           </div>

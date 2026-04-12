@@ -35,7 +35,7 @@ export function ContactForm() {
         <p className="font-mono text-sm uppercase text-[#c9a84c] text-center tracking-widest mb-4">
           Контакты
         </p>
-        <h2 className="font-sentient text-4xl md:text-5xl text-center mb-4">
+        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-4">
           Запишитесь на консультацию
         </h2>
         <p className="font-mono text-base text-foreground/70 text-center mb-8">
@@ -43,7 +43,7 @@ export function ContactForm() {
         </p>
 
         {/* Альтернативные контакты */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-10">
           <a
             href="https://t.me/igraol"
             target="_blank"
@@ -96,7 +96,7 @@ export function ContactForm() {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               required
-              className="rounded-xl h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
+              className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
               style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
               onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
               onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
@@ -106,7 +106,7 @@ export function ContactForm() {
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               required
-              className="rounded-xl h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
+              className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
               style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
               onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
               onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}

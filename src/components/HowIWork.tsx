@@ -35,13 +35,13 @@ export function HowIWork() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Подход
         </p>
-        <h2 className="font-sentient text-4xl md:text-5xl text-center mb-16">
+        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-16">
           Как я работаю
         </h2>
 
         <div className="max-w-3xl mx-auto flex flex-col gap-0">
           {steps.map((step, i) => (
-            <div key={step.number} className="flex gap-6 md:gap-10 group">
+            <div key={step.number} className="flex gap-4 md:gap-10 group">
               {/* Линия-таймлайн */}
               <div className="flex flex-col items-center">
                 <div
@@ -63,7 +63,7 @@ export function HowIWork() {
 
               {/* Контент */}
               <div className="pb-10 flex-1">
-                <h3 className="font-sentient text-2xl text-[#c9a84c] mb-3">{step.title}</h3>
+                <h3 className="font-sentient text-xl md:text-2xl text-[#c9a84c] mb-3">{step.title}</h3>
                 <p className="font-mono text-base text-foreground/70 leading-relaxed">{step.text}</p>
               </div>
             </div>

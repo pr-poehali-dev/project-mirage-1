@@ -7,7 +7,7 @@ export function Footer() {
       style={{ background: 'rgba(0,28,34,0.5)', backdropFilter: 'blur(1px)' }}
     >
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8">
 
           {/* Имя и описание */}
           <div className="flex flex-col gap-1 text-center md:text-left">

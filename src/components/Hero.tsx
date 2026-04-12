@@ -51,17 +51,17 @@ export function Hero() {
       <GL hovering={hovering} />
       <Header />
 
-      <div className="pb-16 mt-auto text-center relative">
-        <Pill className="mb-6">ПСИХОЛОГ · СОЦИАЛЬНАЯ ПСИХОЛОГИЯ · ВЛАДИВОСТОК И ОНЛАЙН</Pill>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sentient max-w-[800px] mx-auto leading-tight text-[#c9a84c]">
+      <div className="pb-10 md:pb-16 mt-auto text-center relative px-4">
+        <Pill className="mb-4 md:mb-6 text-[10px] md:text-xs">ПСИХОЛОГ · СОЦИАЛЬНАЯ ПСИХОЛОГИЯ · ВЛАДИВОСТОК И ОНЛАЙН</Pill>
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-sentient max-w-[800px] mx-auto leading-tight text-[#c9a84c]">
           Вы справляетесь. Но внутри —{" "}
           <TypedText />
         </h1>
-        <p className="font-mono text-base sm:text-lg text-foreground/75 text-balance mt-8 max-w-[460px] mx-auto">
+        <p className="font-mono text-sm sm:text-base text-foreground/75 text-balance mt-6 md:mt-8 max-w-[460px] mx-auto">
           Усталость без причины. Тревога. Ощущение, что живёте «не своей жизнью».
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mt-8 md:mt-12">
           <MagneticWrapper>
             <a href="#contact">
               <Button onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>

@@ -42,7 +42,7 @@ export function FAQ() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           FAQ
         </p>
-        <h2 className="font-sentient text-4xl md:text-5xl text-center mb-14">
+        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-14">
           Частые вопросы
         </h2>
 
@@ -58,9 +58,9 @@ export function FAQ() {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                className="w-full flex items-center justify-between gap-4 px-4 py-4 text-left"
               >
-                <span className="font-sentient text-lg text-foreground">{faq.q}</span>
+                <span className="font-sentient text-base md:text-lg text-foreground">{faq.q}</span>
                 <span
                   className="flex-shrink-0 transition-transform duration-300"
                   style={{ transform: open === i ? 'rotate(45deg)' : 'rotate(0deg)' }}
@@ -73,7 +73,7 @@ export function FAQ() {
                 className="overflow-hidden transition-all duration-300"
                 style={{ maxHeight: open === i ? '300px' : '0px' }}
               >
-                <p className="font-mono text-base text-foreground/70 leading-relaxed px-6 pb-6">
+                <p className="font-mono text-base text-foreground/70 leading-relaxed px-4 pb-5">
                   {faq.a}
                 </p>
               </div>
