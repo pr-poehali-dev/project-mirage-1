@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useReveal } from "@/hooks/useReveal";
 
 const steps = [
@@ -72,12 +71,7 @@ export function HowIWork() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-4">
-          <a href="#contact">
-            <Button>[Записаться бесплатно →]</Button>
-          </a>
-        </div>
+
       </div>
     </section>
   );
