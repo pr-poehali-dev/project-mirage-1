@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
-import { useReveal } from "@/hooks/useReveal";
 
 const testimonials = [
   {
@@ -31,7 +30,6 @@ const testimonials = [
 
 export function Testimonials() {
   const [current, setCurrent] = useState(0);
-  const ref = useReveal();
 
   const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
@@ -39,7 +37,7 @@ export function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section ref={ref} className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.35)", backdropFilter: "blur(1px)" }}>
+    <section className="relative z-10 py-24 md:py-32" style={{ background: "rgba(0,48,57,0.35)", backdropFilter: "blur(1px)" }}>
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Отзывы

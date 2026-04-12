@@ -1,5 +1,3 @@
-import { useReveal } from "@/hooks/useReveal";
-
 const stats = [
   { value: "5 лет", label: "практики" },
   { value: "100+", label: "клиентов" },
@@ -7,9 +5,8 @@ const stats = [
 ];
 
 export function About() {
-  const ref = useReveal();
   return (
-    <section ref={ref} id="about" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
+    <section id="about" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
         {/* Фото */}

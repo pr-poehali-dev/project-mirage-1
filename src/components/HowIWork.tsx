@@ -1,5 +1,3 @@
-import { useReveal } from "@/hooks/useReveal";
-
 const steps = [
   {
     number: "01",
@@ -24,10 +22,8 @@ const steps = [
 ];
 
 export function HowIWork() {
-  const ref = useReveal();
   return (
     <section
-      ref={ref}
       id="approach"
       className="relative z-10 py-24 md:py-32"
       style={{ background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)' }}
