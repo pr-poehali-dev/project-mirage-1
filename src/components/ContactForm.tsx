@@ -28,7 +28,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="relative z-10 py-24 md:py-32 bg-white/5 backdrop-blur-sm">
+    <section id="contact" className="relative z-10 py-24 md:py-32 bg-white/[0.03] backdrop-blur-sm">
       <div className="container">
       <div className="max-w-xl mx-auto">
         <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-4">
