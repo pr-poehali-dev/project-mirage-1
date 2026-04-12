@@ -18,7 +18,7 @@ const pains = [
 
 export function PainPoints() {
   return (
-    <section className="relative z-10 py-24 md:py-32 bg-white/[0.07] backdrop-blur-sm">
+    <section className="relative z-10 py-24 md:py-32" style={{background: 'rgba(10,21,32,0.92)'}}>
       <div className="container">
       <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-12">
         Узнаёте себя?
