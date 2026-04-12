@@ -18,7 +18,8 @@ const pains = [
 
 export function PainPoints() {
   return (
-    <section className="container py-24 md:py-32">
+    <section className="relative z-10 py-24 md:py-32 bg-white/5 backdrop-blur-sm">
+      <div className="container">
       <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-12">
         Узнаёте себя?
       </p>
@@ -33,6 +34,7 @@ export function PainPoints() {
             <p className="font-mono text-sm text-foreground/50">{pain.text}</p>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

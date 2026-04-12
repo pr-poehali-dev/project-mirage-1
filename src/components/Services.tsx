@@ -41,7 +41,8 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="container py-24 md:py-32">
+    <section id="services" className="relative z-10 py-24 md:py-32 bg-white/5 backdrop-blur-sm">
+      <div className="container">
       <p className="font-mono text-xs uppercase text-foreground/40 text-center tracking-widest mb-4">
         Услуги
       </p>
@@ -94,6 +95,7 @@ export function Services() {
             </a>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
