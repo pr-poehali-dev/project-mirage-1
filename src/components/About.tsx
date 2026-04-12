@@ -13,11 +13,18 @@ export function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
         {/* Фото */}
         <div className="relative">
-          <div className="absolute inset-0 rounded-3xl bg-foreground/5 blur-3xl scale-95" />
+          {/* Золотое свечение */}
+          <div className="absolute -inset-3 rounded-3xl opacity-60 blur-2xl"
+            style={{ background: 'radial-gradient(ellipse at center, rgba(201,168,76,0.35) 0%, rgba(201,168,76,0.1) 50%, transparent 75%)' }}
+          />
+          {/* Золотая рамка */}
+          <div className="absolute -inset-[1px] rounded-3xl"
+            style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.6) 0%, transparent 40%, transparent 60%, rgba(201,168,76,0.4) 100%)' }}
+          />
           <img
             src="https://cdn.poehali.dev/projects/4c5d8224-14ac-4df6-8232-895419dd60d5/bucket/74a42d7a-c781-437d-9022-9677ddd7b994.png"
             alt="Ольга Разумова — психолог"
-            className="relative rounded-3xl w-full aspect-[3/4] object-cover border border-foreground/10"
+            className="relative rounded-3xl w-full aspect-[3/4] object-cover"
           />
         </div>
 
