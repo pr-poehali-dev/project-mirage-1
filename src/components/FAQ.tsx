@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
+import { useReveal } from "@/hooks/useReveal";
 
 const faqs = [
   {
@@ -30,9 +31,11 @@ const faqs = [
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
+  const ref = useReveal();
 
   return (
     <section
+      ref={ref}
       className="relative z-10 py-24 md:py-32"
       style={{ background: 'rgba(0,48,57,0.75)', backdropFilter: 'blur(12px)' }}
     >

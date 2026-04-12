@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import { useReveal } from "@/hooks/useReveal";
 
 export function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
+  const ref = useReveal();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,7 +31,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.75)', backdropFilter: 'blur(12px)'}}>
+    <section ref={ref} id="contact" className="relative z-10 py-24 md:py-32" style={{background: 'rgba(0,38,46,0.75)', backdropFilter: 'blur(12px)'}}>
       <div className="container">
       <div className="max-w-xl mx-auto">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
