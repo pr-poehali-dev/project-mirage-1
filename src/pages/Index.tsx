@@ -4,6 +4,7 @@ import { Services } from "@/components/Services";
 import { PainPoints } from "@/components/PainPoints";
 import { Testimonials } from "@/components/Testimonials";
 import { ContactForm } from "@/components/ContactForm";
+import { Footer } from "@/components/Footer";
 
 export default function Index() {
   return (
@@ -14,6 +15,7 @@ export default function Index() {
       <Services />
       <Testimonials />
       <ContactForm />
+      <Footer />
     </div>
   );
 }
