@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { MagneticWrapper } from "@/components/MagneticWrapper";
 
 const services = [
   {
@@ -90,18 +91,20 @@ export function Services() {
               {s.description}
             </p>
 
-            <a href="#contact">
-              <Button
-                className={`w-full ${
-                  s.highlight
-                    ? "bg-[#4a7c6f] hover:bg-[#4a7c6f]/80 text-white border-0"
-                    : ""
-                }`}
-                variant={s.highlight ? "default" : "outline"}
-              >
-                {s.cta}
-              </Button>
-            </a>
+            <MagneticWrapper>
+              <a href="#contact">
+                <Button
+                  className={`w-full ${
+                    s.highlight
+                      ? "bg-[#4a7c6f] hover:bg-[#4a7c6f]/80 text-white border-0"
+                      : ""
+                  }`}
+                  variant={s.highlight ? "default" : "outline"}
+                >
+                  {s.cta}
+                </Button>
+              </a>
+            </MagneticWrapper>
           </div>
         ))}
       </div>

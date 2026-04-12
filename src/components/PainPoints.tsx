@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { MagneticWrapper } from "@/components/MagneticWrapper";
 
 const pains = [
   {
@@ -165,9 +166,11 @@ export function PainPoints() {
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <a href="#contact">
-            <Button>[Записаться бесплатно →]</Button>
-          </a>
+          <MagneticWrapper>
+            <a href="#contact">
+              <Button>[Записаться бесплатно →]</Button>
+            </a>
+          </MagneticWrapper>
         </div>
       </div>
     </section>

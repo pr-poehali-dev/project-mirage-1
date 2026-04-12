@@ -74,7 +74,7 @@ export class SimulationMaterial extends THREE.ShaderMaterial {
         uTimeScale: { value: 1 },
         uLoopPeriod: { value: 24.0 },
         uMouse: { value: new THREE.Vector3(0, 0, 0) },
-        uMouseStrength: { value: 0.18 }
+        uMouseStrength: { value: 0.45 }
       }
     })
   }

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { MagneticWrapper } from "@/components/MagneticWrapper";
 
 const steps = [
   {
@@ -70,9 +71,11 @@ export function HowIWork() {
         </div>
 
         <div className="flex justify-center mt-10">
-          <a href="#contact">
-            <Button>[Записаться бесплатно →]</Button>
-          </a>
+          <MagneticWrapper>
+            <a href="#contact">
+              <Button>[Записаться бесплатно →]</Button>
+            </a>
+          </MagneticWrapper>
         </div>
       </div>
     </section>

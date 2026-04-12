@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useCounter } from "@/hooks/useCounter";
 import { useParallax } from "@/hooks/useParallax";
+import { MagneticWrapper } from "@/components/MagneticWrapper";
 
 function StatCounter({ target, suffix, label }: { target: number; suffix: string; label: string }) {
   const { value, ref } = useCounter(target);
@@ -70,9 +71,11 @@ export function About() {
         </div>
       </div>
         <div className="flex justify-center mt-10">
-          <a href="#contact">
-            <Button>[Записаться бесплатно →]</Button>
-          </a>
+          <MagneticWrapper>
+            <a href="#contact">
+              <Button>[Записаться бесплатно →]</Button>
+            </a>
+          </MagneticWrapper>
         </div>
       </div>
     </section>

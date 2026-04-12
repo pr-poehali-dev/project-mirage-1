@@ -3,7 +3,7 @@ import { Pill } from "./Pill";
 import { Button } from "./ui/button";
 import { useState, useEffect } from "react";
 import { Header } from "./Header";
-import { useMagnetic } from "@/hooks/useMagnetic";
+import { MagneticWrapper } from "@/components/MagneticWrapper";
 
 const TYPED_PHRASES = [
   "давно не спокойно.",
@@ -22,11 +22,11 @@ function TypedText() {
     let timeout: ReturnType<typeof setTimeout>;
 
     if (!deleting && displayed.length < phrase.length) {
-      timeout = setTimeout(() => setDisplayed(phrase.slice(0, displayed.length + 1)), 55);
+      timeout = setTimeout(() => setDisplayed(phrase.slice(0, displayed.length + 1)), 110);
     } else if (!deleting && displayed.length === phrase.length) {
-      timeout = setTimeout(() => setDeleting(true), 2200);
+      timeout = setTimeout(() => setDeleting(true), 3000);
     } else if (deleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 30);
+      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 55);
     } else if (deleting && displayed.length === 0) {
       setDeleting(false);
       setPhraseIndex((i) => (i + 1) % TYPED_PHRASES.length);
@@ -45,8 +45,6 @@ function TypedText() {
 
 export function Hero() {
   const [hovering, setHovering] = useState(false);
-  const magBtn1 = useMagnetic(0.3);
-  const magBtn2 = useMagnetic(0.3);
 
   return (
     <div className="flex flex-col h-svh justify-between relative z-10">
@@ -64,23 +62,20 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-          <a ref={magBtn1 as React.RefObject<HTMLAnchorElement>} href="#contact">
-            <Button
-              onMouseEnter={() => setHovering(true)}
-              onMouseLeave={() => setHovering(false)}
-            >
-              [Записаться бесплатно →]
-            </Button>
-          </a>
-          <a ref={magBtn2 as React.RefObject<HTMLAnchorElement>} href="#about">
-            <Button
-              variant="ghost"
-              className="font-mono text-foreground/60 hover:text-foreground uppercase text-sm"
-              onMouseEnter={() => setHovering(false)}
-            >
-              Узнать обо мне
-            </Button>
-          </a>
+          <MagneticWrapper>
+            <a href="#contact">
+              <Button onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
+                [Записаться бесплатно →]
+              </Button>
+            </a>
+          </MagneticWrapper>
+          <MagneticWrapper>
+            <a href="#about">
+              <Button variant="ghost" className="font-mono text-foreground/60 hover:text-foreground uppercase text-sm" onMouseEnter={() => setHovering(false)}>
+                Узнать обо мне
+              </Button>
+            </a>
+          </MagneticWrapper>
         </div>
 
         <p className="font-mono text-sm text-[#c9a84c]/60 mt-6">
