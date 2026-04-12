@@ -60,6 +60,65 @@ const pains = [
     title: "Кризис идентичности",
     text: "Ощущение, что живёте не своей жизнью",
   },
+  {
+    icon: (
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <circle cx="32" cy="32" r="28" fill="url(#g4)" opacity="0.12"/>
+        <rect x="18" y="28" width="28" height="3" rx="1.5" fill="url(#g4)" opacity="0.6"/>
+        <rect x="18" y="33" width="20" height="3" rx="1.5" fill="url(#g4)" opacity="0.35"/>
+        <path d="M42 20 L44 16" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
+        <path d="M46 24 L50 22" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.35"/>
+        <path d="M44 30 L48 30" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.25"/>
+        <path d="M20 44 C20 44 24 40 32 40 C40 40 44 44 44 44" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.4"/>
+        <defs>
+          <linearGradient id="g4" x1="18" y1="16" x2="46" y2="44" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#e8c97a"/>
+            <stop offset="1" stopColor="#7a5c1e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    ),
+    title: "Сложности с границами",
+    text: "Трудно говорить «нет» без чувства вины",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <circle cx="32" cy="32" r="28" fill="url(#g5)" opacity="0.12"/>
+        <path d="M14 36 Q18 26 24 30 Q28 33 32 24 Q36 15 40 22 Q44 29 50 26" stroke="url(#g5)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.7"/>
+        <circle cx="32" cy="24" r="3" fill="#c9a84c" opacity="0.5"/>
+        <path d="M20 46 L44 46" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.3"/>
+        <defs>
+          <linearGradient id="g5" x1="14" y1="26" x2="50" y2="36" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#e8c97a"/>
+            <stop offset="1" stopColor="#7a5c1e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    ),
+    title: "После потрясений",
+    text: "Развод, потеря, переезд — что-то внутри изменилось",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <circle cx="32" cy="32" r="28" fill="url(#g6)" opacity="0.12"/>
+        <path d="M32 44 C32 44 20 38 20 28 C20 22 25.4 18 32 20 C38.6 18 44 22 44 28 C44 38 32 44 32 44Z" fill="url(#g6)" opacity="0.5"/>
+        <path d="M28 28 L32 24 L36 28" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+        <path d="M32 24 L32 34" stroke="#c9a84c" strokeWidth="2" strokeLinecap="round" opacity="0.6"/>
+        <path d="M26 44 L22 50" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.3"/>
+        <path d="M38 44 L42 50" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" opacity="0.3"/>
+        <defs>
+          <linearGradient id="g6" x1="20" y1="18" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#e8c97a"/>
+            <stop offset="1" stopColor="#7a5c1e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    ),
+    title: "Выгорание",
+    text: "Работа когда-то нравилась. Теперь — только обязанность",
+  },
 ];
 
 export function PainPoints() {
@@ -71,7 +130,7 @@ export function PainPoints() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/70 text-center tracking-widest mb-12">
           Узнаёте себя?
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {pains.map((pain, i) => (
             <div
               key={pain.title}
@@ -83,7 +142,6 @@ export function PainPoints() {
                 background: hovered === i ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.03)',
               }}
             >
-              {/* Подсветка-glow за иконкой */}
               <div
                 className="absolute top-4 left-6 w-20 h-20 rounded-full transition-all duration-500 pointer-events-none"
                 style={{
@@ -92,14 +150,12 @@ export function PainPoints() {
                   transform: hovered === i ? 'scale(1.3)' : 'scale(0.8)',
                 }}
               />
-
               <div
                 className="relative w-16 h-16 flex items-center justify-center transition-transform duration-300"
                 style={{ transform: hovered === i ? 'scale(1.12) translateY(-2px)' : 'scale(1)' }}
               >
                 {pain.icon}
               </div>
-
               <h3 className="font-sentient text-xl text-[#c9a84c]">{pain.title}</h3>
               <p className="font-mono text-base text-foreground/70">{pain.text}</p>
             </div>
