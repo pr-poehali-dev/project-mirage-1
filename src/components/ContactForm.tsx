@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import { LegalModal } from "@/components/LegalModal";
 
 export function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [modal, setModal] = useState<"privacy" | "consent" | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ export function ContactForm() {
   };
 
   return (
+    <>
     <section id="contact" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,48,57,0.45)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
       <div className="max-w-xl mx-auto">
@@ -137,12 +140,22 @@ export function ContactForm() {
             </Button>
 
             <p className="font-mono text-xs text-foreground/30 text-center">
-              Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+              Нажимая кнопку, вы соглашаетесь на{" "}
+              <button onClick={() => setModal("consent")} className="underline underline-offset-2 hover:text-foreground/60 transition-colors">
+                обработку персональных данных
+              </button>{" "}
+              и принимаете{" "}
+              <button onClick={() => setModal("privacy")} className="underline underline-offset-2 hover:text-foreground/60 transition-colors">
+                политику конфиденциальности
+              </button>
             </p>
           </form>
         )}
       </div>
       </div>
     </section>
+
+    {modal && <LegalModal type={modal} onClose={() => setModal(null)} />}
+    </>
   );
 }
