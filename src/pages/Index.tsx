@@ -9,6 +9,7 @@ import { HowIWork } from "@/components/HowIWork";
 import { FAQ } from "@/components/FAQ";
 import { SectionCTA } from "@/components/SectionCTA";
 import { AudioWave } from "@/components/AudioWave";
+import { AudioMaterials } from "@/components/AudioMaterials";
 
 export default function Index() {
   return (
@@ -24,6 +25,7 @@ export default function Index() {
       <HowIWork />
       <Services />
       <Testimonials />
+      <AudioMaterials />
       <FAQ />
       <ContactForm />
       <Footer />
