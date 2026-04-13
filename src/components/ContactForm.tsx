@@ -9,6 +9,7 @@ export function ContactForm() {
   const [form, setForm] = useState({ name: "", phone: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [modal, setModal] = useState<"privacy" | "consent" | null>(null);
+  const [agreed, setAgreed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -131,24 +132,42 @@ export function ContactForm() {
               </p>
             )}
 
+            <label className="flex items-start gap-3 cursor-pointer group mt-1">
+              <div
+                className="relative shrink-0 w-5 h-5 rounded mt-0.5 border transition-all duration-200 flex items-center justify-center"
+                style={{
+                  borderColor: agreed ? 'rgba(201,168,76,0.8)' : 'rgba(255,255,255,0.25)',
+                  background: agreed ? 'rgba(201,168,76,0.15)' : 'transparent',
+                }}
+              >
+                {agreed && <Icon name="Check" size={12} className="text-[#c9a84c]" />}
+                <input
+                  type="checkbox"
+                  checked={agreed}
+                  onChange={e => setAgreed(e.target.checked)}
+                  className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+                />
+              </div>
+              <span className="font-mono text-xs text-foreground/40 leading-relaxed group-hover:text-foreground/60 transition-colors">
+                Я ознакомился(-ась) с{" "}
+                <button type="button" onClick={(e) => { e.preventDefault(); setModal("consent"); }} className="underline underline-offset-2 hover:text-[#c9a84c] transition-colors">
+                  согласием на обработку персональных данных
+                </button>{" "}
+                и{" "}
+                <button type="button" onClick={(e) => { e.preventDefault(); setModal("privacy"); }} className="underline underline-offset-2 hover:text-[#c9a84c] transition-colors">
+                  политикой конфиденциальности
+                </button>
+              </span>
+            </label>
+
             <Button
               type="submit"
-              disabled={status === "loading"}
-              className="mt-2 h-12 text-base"
+              disabled={status === "loading" || !agreed}
+              className="mt-1 h-12 text-base transition-opacity duration-200"
+              style={{ opacity: agreed ? 1 : 0.4 }}
             >
               {status === "loading" ? "Отправляю..." : "[Записаться бесплатно →]"}
             </Button>
-
-            <p className="font-mono text-xs text-foreground/30 text-center">
-              Нажимая кнопку, вы соглашаетесь на{" "}
-              <button onClick={() => setModal("consent")} className="underline underline-offset-2 hover:text-foreground/60 transition-colors">
-                обработку персональных данных
-              </button>{" "}
-              и принимаете{" "}
-              <button onClick={() => setModal("privacy")} className="underline underline-offset-2 hover:text-foreground/60 transition-colors">
-                политику конфиденциальности
-              </button>
-            </p>
           </form>
         )}
       </div>
