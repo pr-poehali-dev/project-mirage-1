@@ -49,7 +49,7 @@ export function ContactForm() {
         {/* Альтернативные контакты */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-10">
           <a
-            href="https://t.me/igraol"
+            href="https://t.me/razumovaoa"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"

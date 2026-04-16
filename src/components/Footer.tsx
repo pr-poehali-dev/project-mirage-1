@@ -22,13 +22,13 @@ export function Footer() {
           {/* Контакты */}
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <a
-              href="https://t.me/igraol"
+              href="https://t.me/razumovaoa"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 font-mono text-sm text-foreground/60 hover:text-[#c9a84c] transition-colors duration-200"
             >
               <Icon name="Send" size={16} />
-              @igraol
+              @razumovaoa
             </a>
             <a
               href="tel:+79142755070"
