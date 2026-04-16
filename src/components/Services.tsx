@@ -45,7 +45,7 @@ export function Services() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section id="services" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(18,28,16,0.40)', backdropFilter: 'blur(1px)'}}>
+    <section id="services" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
       <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
         Услуги
@@ -66,8 +66,8 @@ export function Services() {
                 ? s.highlight ? 'rgba(74,124,111,0.9)' : 'rgba(201,168,76,0.55)'
                 : s.highlight ? 'rgba(74,124,111,0.7)' : 'rgba(255,255,255,0.18)',
               background: hovered === i
-                ? s.highlight ? 'rgba(26,42,22,0.90)' : 'rgba(26,42,22,0.80)'
-                : s.highlight ? 'rgba(26,42,22,0.75)' : 'rgba(26,42,22,0.65)',
+                ? s.highlight ? 'rgba(74,124,111,0.25)' : 'rgba(255,255,255,0.14)'
+                : s.highlight ? 'rgba(74,124,111,0.15)' : 'rgba(255,255,255,0.08)',
             }}
           >
             {s.popular && (

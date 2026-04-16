@@ -18,7 +18,7 @@ function StatCounter({ target, suffix, label }: { target: number; suffix: string
 export function About() {
   const photoRef = useParallax(0.025);
   return (
-    <section id="about" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(18,28,16,0.40)', backdropFilter: 'blur(1px)'}}>
+    <section id="about" className="relative z-10 py-14 md:py-20" style={{background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)'}}>
       <div className="container">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center max-w-5xl mx-auto">
         {/* Фото */}

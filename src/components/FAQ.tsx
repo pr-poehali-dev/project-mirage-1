@@ -36,7 +36,7 @@ export function FAQ() {
   return (
     <section
       className="relative z-10 py-14 md:py-20"
-      style={{ background: 'rgba(18,28,16,0.40)', backdropFilter: 'blur(1px)' }}
+      style={{ background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)' }}
     >
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
@@ -53,7 +53,7 @@ export function FAQ() {
               className="border rounded-2xl overflow-hidden transition-all duration-300"
               style={{
                 borderColor: open === i ? 'rgba(201,168,76,0.4)' : 'rgba(255,255,255,0.1)',
-                background: open === i ? 'rgba(26,42,22,0.80)' : 'rgba(26,42,22,0.65)',
+                background: open === i ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.03)',
               }}
             >
               <button
