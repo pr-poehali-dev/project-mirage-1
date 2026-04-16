@@ -191,7 +191,7 @@ export function AudioMaterials() {
       id="audio"
       className="relative z-10 py-14 md:py-20"
       style={{
-        background: "rgba(0,38,46,0.25)",
+        background: "rgba(18,28,16,0.40)",
         backdropFilter: "blur(1px)",
       }}
     >

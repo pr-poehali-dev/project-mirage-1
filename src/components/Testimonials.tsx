@@ -39,7 +39,7 @@ export function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="relative z-10 py-14 md:py-20" style={{ background: "rgba(0,48,57,0.45)", backdropFilter: "blur(1px)" }}>
+    <section className="relative z-10 py-14 md:py-20" style={{ background: "rgba(18,28,16,0.40)", backdropFilter: "blur(1px)" }}>
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Отзывы
@@ -51,16 +51,16 @@ export function Testimonials() {
         <div className="max-w-2xl mx-auto">
           <div
             className="border rounded-2xl p-5 md:p-10 flex flex-col gap-6 transition-all duration-300"
-            style={{ background: "rgba(0,72,86,0.6)", borderColor: "rgba(255,255,255,0.12)" }}
+            style={{ background: "rgba(26,42,22,0.65)", borderColor: "rgba(255,255,255,0.12)" }}
             onMouseEnter={e => {
               const el = e.currentTarget as HTMLDivElement;
-              el.style.background = "rgba(0,90,108,0.7)";
+              el.style.background = "rgba(26,42,22,0.85)";
               el.style.borderColor = "rgba(201,168,76,0.5)";
               el.style.boxShadow = "0 0 28px 0 rgba(201,168,76,0.12)";
             }}
             onMouseLeave={e => {
               const el = e.currentTarget as HTMLDivElement;
-              el.style.background = "rgba(0,72,86,0.6)";
+              el.style.background = "rgba(26,42,22,0.65)";
               el.style.borderColor = "rgba(255,255,255,0.12)";
               el.style.boxShadow = "none";
             }}

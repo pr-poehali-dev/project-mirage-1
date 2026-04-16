@@ -137,6 +137,6 @@ html {
   background: radial-gradient(
     ellipse at center,
     transparent 30%,
-    rgba(0, 56, 65, 0.7) 100%
+    rgba(10, 20, 8, 0.7) 100%
   );
 }
