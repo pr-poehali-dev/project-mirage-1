@@ -9,33 +9,37 @@ const services = [
     period: null,
     description: "30 минут. Рассказываете, что происходит. Без обязательств. Просто поговорим.",
     cta: "Записаться →",
+    ariaLabel: "Записаться на бесплатную вводную консультацию психолога онлайн",
     popular: false,
     highlight: false,
   },
   {
     title: "Разовая сессия",
-    price: "2 500 ₽",
-    period: "/ 50 мин",
+    price: "4 000 ₽",
+    period: "/ 60 мин",
     description: "Онлайн или очно. Подходит для первичной консультации или разового вопроса.",
     cta: "Начать →",
+    ariaLabel: "Записаться на разовую консультацию психолога-коуча — 4 000 ₽, 60 минут",
     popular: false,
     highlight: false,
   },
   {
     title: "Пакет 4 сессии",
-    price: "9 000 ₽",
+    price: "14 400 ₽",
     period: "/ месяц",
     description: "Месяц работы. Скидка 10%. Оптимально для разбора конкретного запроса.",
     cta: "Начать →",
+    ariaLabel: "Записаться на пакет 4 сессии с психологом-коучем онлайн — 14 400 ₽ в месяц",
     popular: true,
     highlight: true,
   },
   {
     title: "Пакет 8 сессий",
-    price: "17 000 ₽",
+    price: "27 000 ₽",
     period: "/ 2 месяца",
     description: "Глубокая работа с запросом. Максимальный результат. Экономия 15%.",
     cta: "Начать →",
+    ariaLabel: "Записаться на пакет 8 сессий с психологом-коучем — 27 000 ₽, глубокая работа",
     popular: false,
     highlight: false,
   },
@@ -100,6 +104,7 @@ export function Services() {
                       : ""
                   }`}
                   variant={s.highlight ? "default" : "outline"}
+                  aria-label={s.ariaLabel}
                 >
                   {s.cta}
                 </Button>
