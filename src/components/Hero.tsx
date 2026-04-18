@@ -54,6 +54,7 @@ export function Hero() {
       <div className="pb-10 md:pb-16 mt-auto text-center relative px-4">
         <Pill className="mb-4 md:mb-6 text-[10px] md:text-xs">ПСИХОЛОГ · СОЦИАЛЬНАЯ ПСИХОЛОГИЯ · ВЛАДИВОСТОК И ОНЛАЙН</Pill>
         <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-sentient max-w-[800px] mx-auto leading-tight text-[#c9a84c]">
+          <span className="sr-only">Психолог-коуч онлайн и Владивосток — </span>
           Вы справляетесь. Но внутри —{" "}
           <TypedText />
         </h1>

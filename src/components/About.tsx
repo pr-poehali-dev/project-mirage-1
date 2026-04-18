@@ -32,7 +32,7 @@ export function About() {
           <img
             ref={photoRef as React.RefObject<HTMLImageElement>}
             src="https://cdn.poehali.dev/projects/4c5d8224-14ac-4df6-8232-895419dd60d5/bucket/74a42d7a-c781-437d-9022-9677ddd7b994.png"
-            alt="Ольга Разумова — психолог"
+            alt="Ольга Разумова — психолог-коуч онлайн, Владивосток"
             className="relative rounded-3xl w-full aspect-[3/4] object-cover"
           />
         </div>
