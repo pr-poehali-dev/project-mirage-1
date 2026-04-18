@@ -6,7 +6,7 @@ import Icon from "@/components/ui/icon";
 import { LegalModal } from "@/components/LegalModal";
 
 export function ContactForm() {
-  const [form, setForm] = useState({ name: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", telegram: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [modal, setModal] = useState<"privacy" | "consent" | null>(null);
   const [agreed, setAgreed] = useState(false);
@@ -22,7 +22,7 @@ export function ContactForm() {
       });
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", phone: "", message: "" });
+        setForm({ name: "", phone: "", telegram: "", message: "" });
       } else {
         setStatus("error");
       }
@@ -106,10 +106,19 @@ export function ContactForm() {
               onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
             />
             <Input
-              placeholder="Телефон или Telegram"
+              placeholder="Телефон, например +7 914 275-50-70"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              required
+              type="tel"
+              className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+              onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
+              onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
+            />
+            <Input
+              placeholder="Telegram, например @username"
+              value={form.telegram}
+              onChange={(e) => setForm({ ...form, telegram: e.target.value })}
               className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
               style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
               onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}

@@ -20,14 +20,15 @@ def handler(event: dict, context) -> dict:
     body = json.loads(event.get("body") or "{}")
     name = body.get("name", "").strip()
     phone = body.get("phone", "").strip()
+    telegram = body.get("telegram", "").strip()
     message = body.get("message", "").strip()
     service = body.get("service", "").strip()
 
-    if not name or not phone:
+    if not name or not (phone or telegram):
         return {
             "statusCode": 400,
             "headers": headers,
-            "body": json.dumps({"error": "Укажите имя и телефон"}, ensure_ascii=False),
+            "body": json.dumps({"error": "Укажите имя и телефон или Telegram"}, ensure_ascii=False),
         }
 
     smtp_password = os.environ["SMTP_PASSWORD"]
@@ -43,7 +44,8 @@ def handler(event: dict, context) -> dict:
 Новая заявка с сайта!
 
 Имя: {name}
-Телефон: {phone}
+{"Телефон: " + phone if phone else ""}
+{"Telegram: " + telegram if telegram else ""}
 {"Услуга: " + service if service else ""}
 {"Сообщение: " + message if message else ""}
 """.strip()
@@ -53,7 +55,8 @@ def handler(event: dict, context) -> dict:
   <h2 style="color: #4a7c6f; margin-top: 0;">Новая заявка с сайта</h2>
   <table style="width: 100%; border-collapse: collapse;">
     <tr><td style="padding: 8px 0; color: #666; width: 120px;">Имя</td><td style="padding: 8px 0; font-weight: bold;">{name}</td></tr>
-    <tr><td style="padding: 8px 0; color: #666;">Телефон</td><td style="padding: 8px 0; font-weight: bold;">{phone}</td></tr>
+    {"<tr><td style='padding: 8px 0; color: #666;'>Телефон</td><td style='padding: 8px 0; font-weight: bold;'>" + phone + "</td></tr>" if phone else ""}
+    {"<tr><td style='padding: 8px 0; color: #666;'>Telegram</td><td style='padding: 8px 0; font-weight: bold;'>" + telegram + "</td></tr>" if telegram else ""}
     {"<tr><td style='padding: 8px 0; color: #666;'>Услуга</td><td style='padding: 8px 0;'>" + service + "</td></tr>" if service else ""}
     {"<tr><td style='padding: 8px 0; color: #666; vertical-align: top;'>Сообщение</td><td style='padding: 8px 0;'>" + message + "</td></tr>" if message else ""}
   </table>
