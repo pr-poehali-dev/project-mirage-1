@@ -105,25 +105,35 @@ export function ContactForm() {
               onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
               onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
             />
-            <Input
-              placeholder="Телефон, например +7 914 275-50-70"
-              value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              type="tel"
-              className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
-              onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
-              onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
-            />
-            <Input
-              placeholder="Telegram, например @username"
-              value={form.telegram}
-              onChange={(e) => setForm({ ...form, telegram: e.target.value })}
-              className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
-              onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
-              onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
-            />
+            <div className="flex flex-col gap-2">
+              <Input
+                placeholder="Телефон, например +7 914 275-50-70"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                type="tel"
+                className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
+                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+                onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
+                onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
+              />
+              <div className="flex items-center gap-3">
+                <div className="flex-1 h-px bg-foreground/10" />
+                <span className="font-mono text-xs text-foreground/35 shrink-0">или</span>
+                <div className="flex-1 h-px bg-foreground/10" />
+              </div>
+              <Input
+                placeholder="Telegram, например @username"
+                value={form.telegram}
+                onChange={(e) => setForm({ ...form, telegram: e.target.value })}
+                className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
+                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+                onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
+                onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
+              />
+              <p className="font-mono text-xs text-foreground/35 text-center">
+                Заполните хотя бы одно поле для связи
+              </p>
+            </div>
             <Textarea
               placeholder="С чем хотите поработать? (необязательно)"
               value={form.message}
