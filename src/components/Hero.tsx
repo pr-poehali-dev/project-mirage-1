@@ -56,7 +56,7 @@ export function Hero() {
         <div className="font-sentient text-[#c9a84c] text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight max-w-[800px] mx-auto">
           Вы справляетесь.
         </div>
-        <div className="font-sentient text-[#c9a84c] text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight max-w-[800px] mx-auto" style={{ height: "1.25em", overflow: "hidden" }}>
+        <div className="font-sentient text-[#c9a84c] text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight max-w-[800px] mx-auto">
           Но внутри — <TypedText />
         </div>
         <p className="font-mono text-sm sm:text-base text-foreground/75 text-balance mt-6 md:mt-8 max-w-[460px] mx-auto">
