@@ -59,8 +59,8 @@ export function Hero() {
           </h1>
         </div>
 
-        <div className="font-sentient text-[#c9a84c]/80 leading-tight max-w-[860px] mx-auto mt-2 md:mt-3 h-[2.5rem] sm:h-[4rem] md:h-[5rem] lg:h-[6rem] flex items-start justify-center">
-          <div className="text-xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <div className="font-sentient text-[#e8c76a] leading-tight max-w-[860px] mx-auto mt-2 md:mt-3 h-[3rem] sm:h-[5rem] md:h-[6rem] lg:h-[7rem] flex items-start justify-center">
+          <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
             <TypedText />
           </div>
         </div>
