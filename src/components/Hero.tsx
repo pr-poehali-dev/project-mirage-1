@@ -57,7 +57,7 @@ export function Hero() {
           <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl">
             Вы справляетесь.
           </div>
-          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl min-h-[1.2em]">
+          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl h-[1.2em] flex items-center justify-center">
             Но внутри — <TypedText />
           </div>
         </h1>
