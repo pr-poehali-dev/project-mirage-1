@@ -46,7 +46,7 @@ export function About() {
             Ольга Разумова
           </h2>
           <p className="font-mono text-sm text-[#c9a84c]/60 uppercase tracking-wider">
-            Психолог · Социальная психология
+            Психолог · Коуч
           </p>
 
           <p className="text-foreground/80 leading-relaxed text-balance text-sm md:text-lg">
