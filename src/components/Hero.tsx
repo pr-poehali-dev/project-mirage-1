@@ -22,11 +22,11 @@ function TypedText() {
     let timeout: ReturnType<typeof setTimeout>;
 
     if (!deleting && displayed.length < phrase.length) {
-      timeout = setTimeout(() => setDisplayed(phrase.slice(0, displayed.length + 1)), 110);
+      timeout = setTimeout(() => setDisplayed(phrase.slice(0, displayed.length + 1)), 65);
     } else if (!deleting && displayed.length === phrase.length) {
-      timeout = setTimeout(() => setDeleting(true), 3000);
+      timeout = setTimeout(() => setDeleting(true), 2500);
     } else if (deleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 55);
+      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 35);
     } else if (deleting && displayed.length === 0) {
       setDeleting(false);
       setPhraseIndex((i) => (i + 1) % TYPED_PHRASES.length);
