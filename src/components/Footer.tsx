@@ -31,11 +31,11 @@ export function Footer() {
               @razumovaoa
             </a>
             <a
-              href="tel:+79142755070"
+              href="tel:+79140755070"
               className="flex items-center gap-2 font-mono text-sm text-foreground/60 hover:text-[#c9a84c] transition-colors duration-200"
             >
               <Icon name="Phone" size={16} />
-              <span className="whitespace-nowrap">+7 914 275-50-70</span>
+              <span className="whitespace-nowrap">+7 914 075-50-70</span>
             </a>
           </div>
 

@@ -61,14 +61,14 @@ export function ContactForm() {
             Написать в Telegram
           </a>
           <a
-            href="tel:+79142755070"
+            href="tel:+79140755070"
             className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
             style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
             onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.65)'}
             onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.3)'}
           >
             <Icon name="Phone" size={15} />
-            +7 914 275-50-70
+            +7 914 075-50-70
           </a>
         </div>
 
@@ -107,7 +107,7 @@ export function ContactForm() {
             />
             <div className="flex flex-col gap-2">
               <Input
-                placeholder="Телефон, например +7 914 275-50-70"
+                placeholder="Телефон +7 914 075-50-70"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 type="tel"
@@ -122,7 +122,7 @@ export function ContactForm() {
                 <div className="flex-1 h-px bg-foreground/10" />
               </div>
               <Input
-                placeholder="Telegram, например @username"
+                placeholder="Telegram @username"
                 value={form.telegram}
                 onChange={(e) => setForm({ ...form, telegram: e.target.value })}
                 className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"

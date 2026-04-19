@@ -1,19 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { useCounter } from "@/hooks/useCounter";
 import { useParallax } from "@/hooks/useParallax";
 import { MagneticWrapper } from "@/components/MagneticWrapper";
-
-function StatCounter({ target, suffix, label }: { target: number; suffix: string; label: string }) {
-  const { value, ref } = useCounter(target);
-  return (
-    <div className="flex flex-col gap-1">
-      <span ref={ref as React.RefObject<HTMLSpanElement>} className="font-sentient text-xl md:text-2xl text-[#c9a84c]">
-        {value}{suffix}
-      </span>
-      <span className="font-mono text-xs text-[#c9a84c]/60 uppercase">{label}</span>
-    </div>
-  );
-}
 
 export function About() {
   const photoRef = useParallax(0.025);
@@ -59,15 +46,7 @@ export function About() {
             Моя задача — не дать совет, а помочь вам услышать себя.
           </p>
 
-          {/* Анимированные счётчики */}
-          <div className="grid grid-cols-3 gap-4 mt-4 border-t border-foreground/10 pt-6">
-            <StatCounter target={5} suffix=" лет" label="практики" />
-            <StatCounter target={100} suffix="+" label="клиентов" />
-            <div className="flex flex-col gap-1">
-              <span className="font-sentient text-xl md:text-2xl text-[#c9a84c]">МЦПО</span>
-              <span className="font-mono text-xs text-[#c9a84c]/60 uppercase">диплом психолога</span>
-            </div>
-          </div>
+
         </div>
       </div>
         <div className="flex justify-center mt-10">

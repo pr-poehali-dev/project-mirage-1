@@ -17,7 +17,7 @@ const content: Record<ModalType, { title: string; body: React.ReactNode }> = {
 
         <div>
           <h4 className="text-foreground/90 mb-2 uppercase tracking-widest text-xs">1. Оператор</h4>
-          <p>Индивидуальный психолог Разумова Ольга (далее — «Оператор»). Контакт: <a href="tel:+79142755070" className="text-[#c9a84c] hover:underline">+7 914 275-50-70</a>, <a href="https://t.me/razumovaoa" className="text-[#c9a84c] hover:underline">@razumovaoa</a>.</p>
+          <p>Индивидуальный психолог Разумова Ольга (далее — «Оператор»). Контакт: <a href="tel:+79140755070" className="text-[#c9a84c] hover:underline">+7 914 075-50-70</a>, <a href="https://t.me/razumovaoa" className="text-[#c9a84c] hover:underline">@razumovaoa</a>.</p>
         </div>
 
         <div>
@@ -66,7 +66,7 @@ const content: Record<ModalType, { title: string; body: React.ReactNode }> = {
 
         <div>
           <h4 className="text-foreground/90 mb-2 uppercase tracking-widest text-xs">Оператор</h4>
-          <p>Индивидуальный психолог Разумова Ольга. Контакт: <a href="tel:+79142755070" className="text-[#c9a84c] hover:underline">+7 914 275-50-70</a>.</p>
+          <p>Индивидуальный психолог Разумова Ольга. Контакт: <a href="tel:+79140755070" className="text-[#c9a84c] hover:underline">+7 914 075-50-70</a>.</p>
         </div>
 
         <div>
