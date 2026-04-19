@@ -19,7 +19,7 @@ export function About() {
           <img
             ref={photoRef as React.RefObject<HTMLImageElement>}
             src="https://cdn.poehali.dev/projects/4c5d8224-14ac-4df6-8232-895419dd60d5/bucket/74a42d7a-c781-437d-9022-9677ddd7b994.png"
-            alt="Ольга Разумова — психолог-коуч онлайн, Владивосток"
+            alt="Ольга Разумова — психолог-коуч, Владивосток"
             className="relative rounded-3xl w-full aspect-[3/4] object-cover"
           />
         </div>
@@ -27,23 +27,26 @@ export function About() {
         {/* Текст */}
         <div className="flex flex-col gap-6">
           <p className="font-mono text-sm uppercase text-[#c9a84c]/80 tracking-widest">
-            Обо мне
+            Психолог · Коуч · Владивосток
           </p>
           <h2 className="font-sentient text-3xl md:text-5xl leading-tight">
-            Ольга Разумова
+            Работаю с людьми, которые хотят изменений —
+            но не знают, с чего начать.
           </h2>
           <p className="font-mono text-sm text-[#c9a84c]/60 uppercase tracking-wider">
-            Психолог · Коуч
+            Психолог, коуч. Практикую онлайн.
           </p>
 
-          <p className="text-foreground/80 leading-relaxed text-balance text-sm md:text-lg">
-            Я помогаю взрослым выйти из состояния хронической усталости, тревоги
-            и внутреннего конфликта — туда, где снова появляется энергия и ясность.
+          <p className="text-foreground/80 leading-relaxed text-sm md:text-base">
+            Мне близки люди, которые думают — и чувствуют одновременно.
+            Которые застряли не потому что слабые, а потому что слишком долго
+            тянули всё сами. Моя задача — не советовать, а помочь тебе
+            услышать себя.
           </p>
-          <p className="text-foreground/80 leading-relaxed text-balance text-sm md:text-lg">
-            В работе использую <span className="text-foreground">интегративный подход</span> —
-            сочетаю разные методы под конкретного человека, без шаблонов и готовых ответов.
-            Моя задача — не дать совет, а помочь вам услышать себя.
+          <p className="text-foreground/80 leading-relaxed text-sm md:text-base">
+            В работе соединяю психологию и коучинг: иногда нужно разобраться
+            в прошлом, иногда — просто определить следующий шаг.
+            Зависит от тебя и от запроса.
           </p>
 
 
