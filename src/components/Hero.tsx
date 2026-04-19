@@ -52,11 +52,15 @@ export function Hero() {
       <Header />
 
       <div className="pb-10 md:pb-16 mt-auto text-center relative px-4">
-        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-sentient max-w-[800px] mx-auto leading-tight text-[#c9a84c]">
+        <div className="font-sentient max-w-[800px] mx-auto text-[#c9a84c] leading-tight">
           <span className="sr-only">Психолог-коуч онлайн и Владивосток — </span>
-          Вы справляетесь. Но внутри —{" "}
-          <TypedText />
-        </h1>
+          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl">
+            Вы справляетесь.
+          </div>
+          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl" style={{ minHeight: "1.25em" }}>
+            Но внутри — <TypedText />
+          </div>
+        </div>
         <p className="font-mono text-sm sm:text-base text-foreground/75 text-balance mt-6 md:mt-8 max-w-[460px] mx-auto">
           Усталость без причины. Тревога. Ощущение, что живёте «не своей жизнью».
         </p>
