@@ -10,11 +10,11 @@ export const Logo = ({ className }: LogoProps) => {
         alt="Логотип"
         className="w-[5.5rem] h-[5.5rem] object-contain flex-shrink-0"
       />
-      <div className="flex flex-col gap-1">
-        <span className="font-mono text-[1.75rem] tracking-[0.15em] text-foreground font-medium uppercase leading-none">
+      <div className="flex flex-col gap-0.5">
+        <span className="font-mono text-sm tracking-[0.15em] text-foreground font-medium uppercase leading-none">
           РАЗУМОВА ОЛЬГА
         </span>
-        <span className="font-mono text-[0.7rem] tracking-[0.25em] text-foreground/50 uppercase leading-none">
+        <span className="font-mono text-[9px] tracking-[0.25em] text-foreground/50 uppercase leading-none">
           ПСИХОЛОГ · КОУЧ
         </span>
       </div>
