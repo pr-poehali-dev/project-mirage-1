@@ -58,7 +58,7 @@ export function Hero() {
             Вы справляетесь.
           </div>
         </div>
-        <div className="font-sentient text-[#c9a84c] leading-tight max-w-[800px] mx-auto mt-1 md:mt-2 h-[3rem] sm:h-[4.5rem] md:h-[7rem] lg:h-[8rem] flex items-start justify-center overflow-hidden">
+        <div className="font-sentient text-[#c9a84c] leading-tight max-w-[800px] mx-auto mt-1 md:mt-2 h-[3.5rem] sm:h-[5rem] md:h-[8rem] lg:h-[9rem] flex items-start justify-center">
           <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl">
             Но внутри — <TypedText />
           </div>
