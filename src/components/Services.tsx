@@ -3,40 +3,31 @@ import { MagneticWrapper } from "@/components/MagneticWrapper";
 
 const services = [
   {
-    title: "Знакомство",
-    price: "Бесплатно",
-    period: null,
-    description: "30 минут. Рассказываете, что происходит. Без обязательств. Просто поговорим.",
-    cta: "Записаться →",
-    ariaLabel: "Записаться на бесплатную вводную консультацию психолога онлайн",
-    popular: false,
-  },
-  {
     title: "Разовая сессия",
-    price: "4 000 ₽",
-    period: "/ 60 мин",
-    description: "Онлайн или очно. Подходит для первичной консультации или разового вопроса.",
-    cta: "Начать →",
-    ariaLabel: "Записаться на разовую консультацию психолога-коуча — 4 000 ₽, 60 минут",
+    price: "2 500 ₽",
+    period: "/ 50 минут",
+    description: "Если нужно разобраться в конкретной ситуации здесь и сейчас. Один запрос — один час работы. Без обязательств продолжать.",
+    cta: "Записаться на сессию",
+    ariaLabel: "Записаться на разовую сессию с психологом-коучем — 2 500 ₽, 50 минут",
     popular: false,
   },
   {
     title: "Пакет 4 сессии",
-    price: "14 400 ₽",
-    period: "/ месяц",
-    description: "Месяц работы. Скидка 10%. Оптимально для разбора конкретного запроса. Онлайн или очно.",
-    cta: "Выбрать тариф →",
-    ariaLabel: "Записаться на пакет 4 сессии с психологом-коучем онлайн — 14 400 ₽ в месяц",
-    popular: true,
+    price: "9 000 ₽",
+    period: "/ 4 встречи",
+    description: "Для тех, кто хочет системного результата, а не разовой беседы. Четыре сессии — достаточно, чтобы сдвинуться с места и увидеть закономерности.",
+    cta: "Начать работу",
+    ariaLabel: "Записаться на пакет 4 сессии с психологом-коучем — 9 000 ₽",
+    popular: false,
   },
   {
-    title: "Пакет 8 сессий",
+    title: "Глубокое сопровождение",
     price: "27 000 ₽",
     period: "/ 2 месяца",
-    description: "Глубокая работа с запросом. Максимальный результат. Экономия 15%.",
-    cta: "Выбрать тариф →",
-    ariaLabel: "Записаться на пакет 8 сессий с психологом-коучем — 27 000 ₽, глубокая работа",
-    popular: false,
+    description: "8 сессий за 2 месяца. Для тех, кто готов работать серьёзно — с тревогой, отношениями, выгоранием, жизненными развилками. Здесь происходят реальные изменения.",
+    cta: "Хочу глубокую работу",
+    ariaLabel: "Записаться на глубокое сопровождение — 27 000 ₽, 2 месяца",
+    popular: true,
   },
 ];
 
@@ -45,10 +36,10 @@ export function Services() {
     <section id="services" className="relative z-10 py-14 md:py-20" style={{ background: 'rgba(0,38,46,0.35)', backdropFilter: 'blur(1px)' }}>
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
-          Услуги
+          Формат работы
         </p>
         <h2 className="font-sentient text-4xl md:text-5xl text-center mb-14">
-          Выберите свой формат
+          С чего начать
         </h2>
 
         <div className="flex flex-col gap-3 max-w-2xl mx-auto">
@@ -63,7 +54,7 @@ export function Services() {
             >
               {s.popular && (
                 <span className="absolute top-4 right-4 font-mono text-[10px] uppercase tracking-widest text-[#c9a84c] border border-[#c9a84c]/40 px-2 py-0.5 rounded-full">
-                  Популярный
+                  ПОПУЛЯРНО
                 </span>
               )}
 
