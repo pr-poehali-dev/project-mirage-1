@@ -12,10 +12,7 @@ export const Logo = ({ className }: LogoProps) => {
       />
       <div className="flex flex-col leading-tight">
         <span className="font-mono text-sm md:text-base tracking-widest text-foreground font-normal uppercase">
-          ОЛЬГА
-        </span>
-        <span className="font-mono text-[9px] md:text-[10px] tracking-[3px] text-foreground/50 uppercase">
-          ПСИХОЛОГ
+          ОЛЬГА РАЗУМОВА
         </span>
       </div>
     </div>
