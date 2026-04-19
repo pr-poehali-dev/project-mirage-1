@@ -38,7 +38,7 @@ function TypedText() {
   return (
     <i className="font-light">
       {displayed}
-      <span className="animate-pulse text-[#c9a84c]/60">|</span>
+      <span className="text-[#c9a84c]/60" style={{animation: 'blink 1.2s ease-in-out infinite'}}>|</span>
     </i>
   );
 }

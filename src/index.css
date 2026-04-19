@@ -6,6 +6,16 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 /* Шрифт Sentient заменен на PT Serif с поддержкой кириллицы */
 
 @layer base {
