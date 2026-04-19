@@ -73,7 +73,7 @@ export function HowIWork() {
         <div className="flex justify-center mt-10">
           <MagneticWrapper>
             <a href="#contact">
-              <Button>[Написать и договориться →]</Button>
+              <Button>Написать и договориться →</Button>
             </a>
           </MagneticWrapper>
         </div>

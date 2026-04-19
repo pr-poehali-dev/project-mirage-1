@@ -75,7 +75,7 @@ export function FAQ() {
         <div className="flex justify-center mt-10">
           <MagneticWrapper>
             <a href="#contact">
-              <Button>[Записаться бесплатно →]</Button>
+              <Button>Записаться бесплатно →</Button>
             </a>
           </MagneticWrapper>
         </div>

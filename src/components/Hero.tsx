@@ -75,7 +75,7 @@ export function Hero() {
           <MagneticWrapper>
             <a href="https://t.me/razumovaoa" target="_blank" rel="noopener noreferrer">
               <Button onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
-                [Написать в Telegram →]
+                Написать в Telegram →
               </Button>
             </a>
           </MagneticWrapper>

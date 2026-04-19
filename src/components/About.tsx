@@ -55,7 +55,7 @@ export function About() {
         <div className="flex justify-center mt-10">
           <MagneticWrapper>
             <a href="#contact">
-              <Button>[Узнать обо мне подробнее →]</Button>
+              <Button>Узнать обо мне подробнее →</Button>
             </a>
           </MagneticWrapper>
         </div>
