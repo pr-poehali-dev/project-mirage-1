@@ -51,7 +51,7 @@ export function Hero() {
       <GL hovering={hovering} />
       <Header />
 
-      <div className="pb-10 md:pb-16 mb-16 md:mb-24 mt-auto text-center relative px-4">
+      <div className="pb-10 md:pb-16 mt-auto text-center relative px-4">
         <span className="sr-only">Психолог-коуч онлайн и Владивосток — </span>
         <div className="font-sentient text-[#c9a84c] leading-tight max-w-[800px] mx-auto">
           <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl">
