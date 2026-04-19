@@ -14,6 +14,9 @@ export const Logo = ({ className }: LogoProps) => {
         <span className="font-mono text-sm md:text-base tracking-widest text-foreground font-normal uppercase">
           ОЛЬГА РАЗУМОВА
         </span>
+        <span className="font-mono text-[8px] md:text-[9px] tracking-[2px] text-foreground/50 uppercase">
+          ПСИХОЛОГ · КОУЧ · ОНЛАЙН · ВЛАДИВОСТОК
+        </span>
       </div>
     </div>
   );
