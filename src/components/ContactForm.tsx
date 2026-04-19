@@ -37,29 +37,33 @@ export function ContactForm() {
       <div className="container">
       <div className="max-w-xl mx-auto">
         <p className="font-mono text-sm uppercase text-[#c9a84c] text-center tracking-widest mb-4">
-          Контакты
+          Написать мне
         </p>
         <h2 className="font-sentient text-3xl md:text-5xl text-center mb-4">
-          Запишитесь на консультацию
+          Напиши — начнём
         </h2>
         <p className="font-mono text-base text-foreground/70 text-center mb-8">
-          Отвечу в течение нескольких часов и согласую удобное время
+          Расскажи коротко: что происходит и чего хочется.<br />
+          Я отвечу в течение дня и предложу время для первой сессии.
         </p>
 
         {/* Альтернативные контакты */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-10">
-          <a
-            href="https://t.me/razumovaoa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
-            style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
-            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.65)'}
-            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.3)'}
-          >
-            <Icon name="Send" size={15} />
-            Написать в Telegram
-          </a>
+          <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
+            <a
+              href="https://t.me/razumovaoa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+              onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.65)'}
+              onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.3)'}
+            >
+              <Icon name="Send" size={15} />
+              ✈ Написать в Telegram
+            </a>
+            <p className="text-xs text-foreground/40">🔒 Всё, что ты напишешь, останется между нами</p>
+          </div>
           <a
             href="tel:+79140755070"
             className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
