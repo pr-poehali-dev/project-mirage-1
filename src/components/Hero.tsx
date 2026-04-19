@@ -84,9 +84,7 @@ export function Hero() {
           </MagneticWrapper>
         </div>
 
-        <p className="font-mono text-sm text-[#c9a84c]/60 mt-6">
-          100+ клиентов уже прошли путь к себе
-        </p>
+
       </div>
     </div>
   );
