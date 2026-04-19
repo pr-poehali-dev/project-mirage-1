@@ -53,11 +53,13 @@ export function Hero() {
 
       <div className="pb-10 md:pb-16 mt-auto text-center relative px-4">
         <span className="sr-only">Психолог-коуч онлайн и Владивосток — </span>
-        <div className="font-sentient text-[#c9a84c] text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight max-w-[800px] mx-auto">
-          Вы справляетесь.
-        </div>
-        <div className="font-sentient text-[#c9a84c] text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight max-w-[800px] mx-auto">
-          Но внутри — <TypedText />
+        <div className="font-sentient text-[#c9a84c] leading-tight max-w-[800px] mx-auto">
+          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl">
+            Вы справляетесь.
+          </div>
+          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl mt-1 md:mt-2">
+            Но внутри — <TypedText />
+          </div>
         </div>
         <p className="font-mono text-sm sm:text-base text-foreground/75 text-balance mt-6 md:mt-8 max-w-[460px] mx-auto">
           Усталость без причины. Тревога. Ощущение, что живёте «не своей жизнью».
