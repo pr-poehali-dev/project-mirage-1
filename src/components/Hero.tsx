@@ -1,15 +1,14 @@
 import { GL } from "./gl";
-import { Pill } from "./Pill";
 import { Button } from "./ui/button";
 import { useState, useEffect } from "react";
 import { Header } from "./Header";
 import { MagneticWrapper } from "@/components/MagneticWrapper";
 
 const TYPED_PHRASES = [
-  "давно не спокойно.",
-  "накопилась усталость.",
-  "что-то важное потеряно.",
-  "нет сил быть собой.",
+  "— Выйти из тревоги.",
+  "— Наконец принять решение.",
+  "— Перестать саботировать себя.",
+  "— Начать жить своё, а не чужое.",
 ];
 
 function TypedText() {
@@ -36,10 +35,10 @@ function TypedText() {
   }, [displayed, deleting, phraseIndex]);
 
   return (
-    <i className="font-light">
+    <span className="font-light">
       {displayed}
       <span className="text-[#c9a84c]/60" style={{animation: 'blink 1.2s ease-in-out infinite'}}>|</span>
-    </i>
+    </span>
   );
 }
 
@@ -53,38 +52,37 @@ export function Hero() {
 
       <div className="pb-10 md:pb-16 mt-auto text-center relative px-4">
         <span className="sr-only">Психолог-коуч онлайн и Владивосток — </span>
-        <div className="font-sentient text-[#c9a84c] leading-tight max-w-[800px] mx-auto">
-          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl">
-            Вы справляетесь.
+
+        <div className="font-sentient text-[#c9a84c] leading-tight max-w-[860px] mx-auto">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+            Застряла — значит, пора двигаться.
+          </h1>
+        </div>
+
+        <div className="font-sentient text-[#c9a84c]/80 leading-tight max-w-[860px] mx-auto mt-2 md:mt-3 h-[2.5rem] sm:h-[4rem] md:h-[5rem] lg:h-[6rem] flex items-start justify-center">
+          <div className="text-xl sm:text-3xl md:text-4xl lg:text-5xl">
+            <TypedText />
           </div>
         </div>
-        <div className="font-sentient text-[#c9a84c] leading-tight max-w-[800px] mx-auto mt-1 md:mt-2 h-[3.5rem] sm:h-[5rem] md:h-[8rem] lg:h-[9rem] flex items-start justify-center">
-          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl">
-            Но внутри — <TypedText />
-          </div>
-        </div>
-        <p className="font-mono text-sm sm:text-base text-foreground/75 text-balance mt-6 md:mt-8 max-w-[460px] mx-auto">
-          Усталость без причины. Тревога. Ощущение, что живёте «не своей жизнью».
+
+        <p className="text-sm sm:text-base text-foreground/70 text-balance mt-6 md:mt-8 max-w-[480px] mx-auto leading-relaxed">
+          Онлайн-сессии с психологом-коучем.<br />
+          Работаю с теми, кто чувствует: что-то идёт не так —<br className="hidden sm:block" />
+          но не понимает, что именно.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mt-8 md:mt-12">
+        <div className="flex flex-col items-center gap-3 mt-8 md:mt-10">
           <MagneticWrapper>
-            <a href="#contact">
+            <a href="https://t.me/razumovaoa" target="_blank" rel="noopener noreferrer">
               <Button onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
-                [Записаться бесплатно →]
+                [Написать в Telegram →]
               </Button>
             </a>
           </MagneticWrapper>
-          <MagneticWrapper>
-            <a href="#about">
-              <Button variant="ghost" className="font-mono text-foreground/60 hover:text-foreground uppercase text-sm" onMouseEnter={() => setHovering(false)}>
-                Узнать обо мне
-              </Button>
-            </a>
-          </MagneticWrapper>
+          <p className="text-xs text-foreground/40 mt-1">
+            🔒 Всё, что ты напишешь, останется между нами
+          </p>
         </div>
-
-
       </div>
     </div>
   );
