@@ -189,7 +189,7 @@ export function ContactForm() {
               className="mt-1 h-12 text-base transition-opacity duration-200"
               style={{ opacity: agreed ? 1 : 0.4 }}
             >
-              {status === "loading" ? "Отправляю..." : "[Записаться бесплатно →]"}
+              {status === "loading" ? "Отправляю..." : "Записаться бесплатно →"}
             </Button>
           </form>
         )}
