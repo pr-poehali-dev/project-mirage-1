@@ -4,23 +4,23 @@ import { MagneticWrapper } from "@/components/MagneticWrapper";
 const steps = [
   {
     number: "01",
-    title: "Знакомство",
-    text: "Бесплатная встреча 30 минут — вы рассказываете, что происходит. Я слушаю без оценок. Вместе решаем, подходим ли друг другу.",
+    title: "Первый контакт",
+    text: "Пишешь мне в Telegram — коротко о себе и о том, что беспокоит.\nЯ отвечу в течение дня и предложу удобное время для первой встречи.",
   },
   {
     number: "02",
     title: "Первая сессия",
-    text: "Глубже разбираемся с запросом. Я задаю вопросы, которые помогают увидеть картину целиком — не только симптом, но и его корень.",
+    text: "Час разговора. Никакого «расскажи о детстве» с первых минут —\nначинаем с того, что актуально прямо сейчас.",
   },
   {
     number: "03",
-    title: "Регулярная работа",
-    text: "Встречаемся раз в неделю — онлайн или очно во Владивостоке. Каждая сессия строится на том, что важно именно сейчас.",
+    title: "Работа",
+    text: "Между сессиями даю небольшие практики — не для галочки,\nа то, что реально помогает переключиться. Темп и глубину выбираем вместе.",
   },
   {
     number: "04",
     title: "Результат",
-    text: "Постепенно приходит ясность, появляются силы, меняется отношение к себе и другим. Вы сами замечаете разницу.",
+    text: "Не «тебе стало лучше» на словах, а конкретные изменения —\nв поведении, в решениях, в том, как ты себя чувствуешь каждый день.",
   },
 ];
 
@@ -33,10 +33,10 @@ export function HowIWork() {
     >
       <div className="container">
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
-          Подход
+          Как это работает
         </p>
         <h2 className="font-sentient text-3xl md:text-5xl text-center mb-16">
-          Как я работаю
+          Просто о процессе
         </h2>
 
         <div className="max-w-3xl mx-auto flex flex-col gap-0">
@@ -64,7 +64,7 @@ export function HowIWork() {
               {/* Контент */}
               <div className="pb-10 flex-1">
                 <h3 className="font-sentient text-xl md:text-2xl text-[#c9a84c] mb-3">{step.title}</h3>
-                <p className="font-mono text-base text-foreground/70 leading-relaxed">{step.text}</p>
+                <p className="font-mono text-base text-foreground/70 leading-relaxed whitespace-pre-line">{step.text}</p>
               </div>
             </div>
           ))}
@@ -73,7 +73,7 @@ export function HowIWork() {
         <div className="flex justify-center mt-10">
           <MagneticWrapper>
             <a href="#contact">
-              <Button>[Начать работу →]</Button>
+              <Button>[Написать и договориться →]</Button>
             </a>
           </MagneticWrapper>
         </div>
