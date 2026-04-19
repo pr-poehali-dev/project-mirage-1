@@ -16,7 +16,7 @@ export function Footer() {
           {/* Имя и описание */}
           <div className="flex flex-col gap-1 text-center md:text-left">
             <span className="font-sentient text-xl text-foreground">Ольга Разумова</span>
-            <span className="font-mono text-xs text-[#c9a84c]/60 uppercase tracking-widest">Психолог · Социальная психология</span>
+            <span className="font-mono text-xs text-[#c9a84c]/60 uppercase tracking-widest">Психолог · Коуч</span>
           </div>
 
           {/* Контакты */}
@@ -35,7 +35,7 @@ export function Footer() {
               className="flex items-center gap-2 font-mono text-sm text-foreground/60 hover:text-[#c9a84c] transition-colors duration-200"
             >
               <Icon name="Phone" size={16} />
-              +7 914 275-50-70
+              <span className="whitespace-nowrap">+7 914 275-50-70</span>
             </a>
           </div>
 
