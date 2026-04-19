@@ -71,7 +71,7 @@ export function Services() {
         <div className="flex flex-col gap-4 max-w-3xl mx-auto">
 
           {/* Верхний ряд — две маленькие карточки */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             {small.map((s) => {
               const i = services.indexOf(s);
               return (
