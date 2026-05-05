@@ -35,7 +35,7 @@ export function HowIWork() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Как это работает
         </p>
-        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-16">
+        <h2 className="font-sentient text-2xl sm:text-3xl md:text-5xl text-center mb-10 md:mb-16">
           Просто о процессе
         </h2>
 
@@ -64,7 +64,7 @@ export function HowIWork() {
               {/* Контент */}
               <div className="pb-10 flex-1">
                 <h3 className="font-sentient text-xl md:text-2xl text-[#c9a84c] mb-3">{step.title}</h3>
-                <p className="font-mono text-base text-foreground/70 leading-relaxed whitespace-pre-line">{step.text}</p>
+                <p className="font-mono text-sm md:text-base text-foreground/70 leading-relaxed whitespace-pre-line">{step.text}</p>
               </div>
             </div>
           ))}

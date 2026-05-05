@@ -29,7 +29,7 @@ export function About() {
           <p className="font-mono text-sm uppercase text-[#c9a84c]/80 tracking-widest">
             Психолог · Коуч · Владивосток
           </p>
-          <h2 className="font-sentient text-3xl md:text-5xl leading-tight">
+          <h2 className="font-sentient text-2xl sm:text-3xl md:text-5xl leading-tight">
             Работаю с людьми, которые хотят изменений —
             но не знают, с чего начать.
           </h2>

@@ -161,7 +161,7 @@ export function PainPoints() {
                 </svg>
               </div>
               <h3 className="font-sentient text-base text-[#c9a84c]">{pain.title}</h3>
-              <p className="font-mono text-xs md:text-sm text-foreground/70">{pain.text}</p>
+              <p className="font-mono text-sm text-foreground/70">{pain.text}</p>
             </div>
           ))}
         </div>

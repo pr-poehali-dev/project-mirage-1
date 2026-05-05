@@ -39,10 +39,10 @@ export function ContactForm() {
         <p className="font-mono text-sm uppercase text-[#c9a84c] text-center tracking-widest mb-4">
           Написать мне
         </p>
-        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-4">
+        <h2 className="font-sentient text-2xl sm:text-3xl md:text-5xl text-center mb-4">
           Напиши — начнём
         </h2>
-        <p className="font-mono text-base text-foreground/70 text-center mb-8">
+        <p className="font-mono text-sm md:text-base text-foreground/70 text-center mb-6 md:mb-8">
           Расскажи коротко: что происходит и чего хочется.<br />
           Я отвечу в течение дня и предложу время для первой сессии.
         </p>

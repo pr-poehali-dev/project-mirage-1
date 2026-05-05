@@ -44,7 +44,7 @@ export function Testimonials() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Отзывы
         </p>
-        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-14">
+        <h2 className="font-sentient text-2xl sm:text-3xl md:text-5xl text-center mb-10 md:mb-14">
           Что говорят клиенты
         </h2>
 
@@ -72,7 +72,7 @@ export function Testimonials() {
               <span className="font-mono text-sm text-foreground/70">{t.name}</span>
             </div>
 
-            <p className="text-foreground/85 leading-relaxed whitespace-pre-line text-xs md:text-base">
+            <p className="text-foreground/85 leading-relaxed whitespace-pre-line text-sm md:text-base">
               {t.text}
             </p>
           </div>

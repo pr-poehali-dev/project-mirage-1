@@ -47,7 +47,7 @@ export function Services() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           Услуги
         </p>
-        <h2 className="font-sentient text-4xl md:text-5xl text-center mb-14">
+        <h2 className="font-sentient text-2xl sm:text-4xl md:text-5xl text-center mb-10 md:mb-14">
           Выберите свой формат
         </h2>
 
@@ -55,7 +55,7 @@ export function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="relative rounded-2xl border p-6 flex flex-col sm:flex-row sm:items-center gap-5 transition-all duration-300"
+              className="relative rounded-2xl border p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 transition-all duration-300"
               style={{
                 borderColor: s.popular ? 'rgba(201,168,76,0.55)' : 'rgba(255,255,255,0.12)',
                 background: s.popular ? 'rgba(201,168,76,0.07)' : 'rgba(255,255,255,0.04)',
@@ -71,7 +71,7 @@ export function Services() {
               <div className="flex-1 flex flex-col gap-2">
                 <p className="font-mono text-[11px] uppercase tracking-widest text-foreground/40">{s.title}</p>
                 <div className="flex items-baseline gap-2">
-                  <span className="font-sentient text-3xl text-foreground/90">{s.price}</span>
+                  <span className="font-sentient text-2xl sm:text-3xl text-foreground/90">{s.price}</span>
                   {s.period && <span className="font-mono text-xs text-foreground/35">{s.period}</span>}
                 </div>
                 <p className="text-sm text-foreground/55 leading-relaxed">{s.description}</p>

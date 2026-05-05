@@ -54,18 +54,18 @@ export function Hero() {
         <span className="sr-only">Психолог-коуч онлайн и Владивосток — </span>
 
         <div className="font-sentient text-[#c9a84c] leading-tight max-w-[860px] mx-auto">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl">
             Застряла — значит, пора двигаться.
           </h1>
         </div>
 
-        <div className="font-sentient text-[#e8c76a] leading-tight max-w-[860px] mx-auto mt-2 md:mt-3 h-[3rem] sm:h-[5rem] md:h-[6rem] lg:h-[7rem] flex items-start justify-center">
-          <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
+        <div className="font-sentient text-[#e8c76a] leading-tight max-w-[860px] mx-auto mt-2 md:mt-3 h-[2.5rem] sm:h-[4rem] md:h-[6rem] lg:h-[7rem] flex items-start justify-center">
+          <div className="text-xl sm:text-3xl md:text-5xl lg:text-6xl">
             <TypedText />
           </div>
         </div>
 
-        <p className="text-sm sm:text-base text-foreground/70 text-balance mt-6 md:mt-8 max-w-[480px] mx-auto leading-relaxed">
+        <p className="text-sm sm:text-base text-foreground/70 text-balance mt-4 md:mt-8 max-w-[480px] mx-auto leading-relaxed px-2">
           Онлайн-сессии с психологом-коучем.<br />
           Работаю с теми, кто чувствует: что-то идёт не так —<br className="hidden sm:block" />
           но не понимает, что именно.

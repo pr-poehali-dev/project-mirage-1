@@ -44,7 +44,7 @@ export function Footer() {
             <p className="font-mono text-xs text-foreground/30">
               © {new Date().getFullYear()} Ольга Разумова
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
               <button
                 onClick={() => setModal("privacy")}
                 className="font-mono text-xs text-foreground/30 hover:text-[#c9a84c] transition-colors underline underline-offset-2"

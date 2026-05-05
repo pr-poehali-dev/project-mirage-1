@@ -34,7 +34,7 @@ export function FAQ() {
         <p className="font-mono text-sm uppercase text-[#c9a84c]/80 text-center tracking-widest mb-4">
           FAQ
         </p>
-        <h2 className="font-sentient text-3xl md:text-5xl text-center mb-14">
+        <h2 className="font-sentient text-2xl sm:text-3xl md:text-5xl text-center mb-10 md:mb-14">
           Частые вопросы
         </h2>
 
@@ -65,7 +65,7 @@ export function FAQ() {
                 className="overflow-hidden transition-all duration-300"
                 style={{ maxHeight: open === i ? '300px' : '0px' }}
               >
-                <p className="font-mono text-base text-foreground/70 leading-relaxed px-4 pb-5 whitespace-pre-line">
+                <p className="font-mono text-sm md:text-base text-foreground/70 leading-relaxed px-4 pb-5 whitespace-pre-line">
                   {faq.a}
                 </p>
               </div>
