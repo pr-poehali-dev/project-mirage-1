@@ -120,34 +120,7 @@ export function ContactForm() {
                 onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
                 onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
               />
-              <div className="flex items-center gap-3">
-                <div className="flex-1 h-px bg-foreground/10" />
-                <span className="font-mono text-xs text-foreground/35 shrink-0">или</span>
-                <div className="flex-1 h-px bg-foreground/10" />
-              </div>
-              <Input
-                placeholder="Telegram @username"
-                value={form.telegram}
-                onChange={(e) => setForm({ ...form, telegram: e.target.value })}
-                className="rounded-xl h-12 md:h-14 font-mono text-base placeholder:text-foreground/50 transition-all duration-200"
-                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
-                onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
-                onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
-              />
-              <p className="font-mono text-xs text-foreground/35 text-center">
-                Заполните хотя бы одно поле для связи
-              </p>
             </div>
-            <Textarea
-              placeholder="С чем хотите поработать? (необязательно)"
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              rows={4}
-              className="rounded-xl font-mono text-base placeholder:text-foreground/50 transition-all duration-200 resize-none"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
-              onFocus={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.7)'}
-              onBlur={e => e.currentTarget.style.borderColor = 'rgba(201,168,76,0.3)'}
-            />
 
             {status === "error" && (
               <p className="font-mono text-xs text-red-400 text-center">
