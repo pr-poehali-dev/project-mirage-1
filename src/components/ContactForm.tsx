@@ -89,13 +89,7 @@ export function ContactForm() {
             <p className="font-mono text-sm text-foreground/50">
               Ольга свяжется с вами в ближайшее время
             </p>
-            <Button
-              variant="ghost"
-              className="mt-4 font-mono text-xs text-foreground/40 hover:text-foreground/60 mx-auto"
-              onClick={() => setStatus("idle")}
-            >
-              Отправить ещё одну заявку
-            </Button>
+
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
