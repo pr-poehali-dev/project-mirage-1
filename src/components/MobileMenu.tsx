@@ -55,6 +55,15 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
         >
           <Dialog.Title className="sr-only">Menu</Dialog.Title>
 
+          <Dialog.Close asChild>
+            <button
+              className="absolute top-8 right-4 p-2 text-foreground/60 hover:text-foreground transition-colors"
+              aria-label="Закрыть меню"
+            >
+              <X size={28} />
+            </button>
+          </Dialog.Close>
+
           <nav className="flex flex-col space-y-6 container mx-auto">
             {menuItems.map((item) => (
               <a
