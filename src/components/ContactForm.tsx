@@ -105,7 +105,7 @@ export function ContactForm() {
             />
             <div className="flex flex-col gap-2">
               <Input
-                placeholder="Телефон +7 914 075-50-70"
+                placeholder="Телефон, например: +7 900 000-00-00"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 type="tel"
