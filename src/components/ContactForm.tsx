@@ -48,8 +48,8 @@ export function ContactForm() {
         </p>
 
         {/* Альтернативные контакты */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-10">
-          <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
+        <div className="flex flex-col items-center gap-3 mb-6 md:mb-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             <a
               href="https://t.me/razumovaoa"
               target="_blank"
@@ -62,18 +62,18 @@ export function ContactForm() {
               <Icon name="Send" size={15} />
               ✈ Написать в Telegram
             </a>
-            <p className="text-xs text-foreground/40">🔒 Всё, что ты напишешь, останется между нами</p>
+            <a
+              href="tel:+79140755070"
+              className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
+              onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.65)'}
+              onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.3)'}
+            >
+              <Icon name="Phone" size={15} />
+              +7 914 075-50-70
+            </a>
           </div>
-          <a
-            href="tel:+79140755070"
-            className="flex items-center gap-2 rounded-xl px-5 py-3 font-mono text-sm text-foreground/80 hover:text-[#c9a84c] transition-all duration-200 w-full sm:w-auto justify-center"
-            style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
-            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.65)'}
-            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.3)'}
-          >
-            <Icon name="Phone" size={15} />
-            +7 914 075-50-70
-          </a>
+          <p className="text-xs text-foreground/40">🔒 Всё, что ты напишешь, останется между нами</p>
         </div>
 
         <div className="flex items-center gap-4 mb-8">
